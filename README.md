@@ -1,18 +1,8 @@
-# (Closed) AZ-103 Microsoft Azure Administrator
+# D084 - Cloud Platform Solutions 
+### (Originally posted by the Azure Administrator Courseware Team from MicrosoftLearning, adapted to accommodate for 
 
-> **AZ-104 has been released. We will continue to monitor this repository in the short term, but please consider moving over to the new labs as soon as possible.**
+> **Please note: These labs require that you have an account with Azure. If you do not have an existing subscription, sign up for a free trial**
 
-> **Microsoft is prioritizing cloud resources for Covid-19 support. You can read more here - [Update #2 on Microsoft cloud services continuity](https://azure.microsoft.com/en-us/blog/update-2-on-microsoft-cloud-services-continuity/). There is also an active discussion on the MCT Courseware Forum.**
-
-> **There is a [Lab Recordings and Demos](https://github.com/MicrosoftLearning/Lab-Demo-Recordings) repo with links to videos of labs used in Microsoft Official Curriculum. The intent is to provide Microsoft Certified Trainers an easy way to access a non-audio version recording of hands-on labs used in the portfolio.**
-
-- **Are you a MCT?** - Have a look at our [GitHub User Guide for MCTs](https://microsoftlearning.github.io/MCT-User-Guide/)
-- **Need to manually build the lab instructions?** - Instructions are available in the [MicrosoftLearning/Docker-Build](https://github.com/MicrosoftLearning/Docker-Build) repository
-- View list of labs by AZ-103 module - https://microsoftlearning.github.io/AZ-103-MicrosoftAzureAdministrator/
-
-> The AZ-100 and AZ-101 certifications are being replaced by a new AZ-103 Microsoft Azure Administrator exam! You can read more about this announcement on Liberty Munson’s blog at https://www.microsoft.com/en-us/learning/community-blog-post.aspx?BlogId=8&Id=375217
-
-> Be sure to use the [MCT Courseware Forum](https://www.microsoft.com/en-us/learning/mct-central.aspx) for suggestions or general comments on the course content. Also, bugs and course errors can be reported on the [Courseware Support Forum](https://trainingsupport.microsoft.com/en-us).
 
 To support the new exam, we introduce a new AZ-103 GitHub repository, starting on May 3 2019. At that time, all the AZ-100 and AZ-101 labs in their respective repositories will be moved to this repository. Those labs are being reused in AZ-103 and we would like to maintain only one repository. The AZ-100 and AZ-101 lab numbering system will be retained, so if you are still teaching the AZ-100 or AZ-101 courses you will be able to easily identify the labs. You will also be able to get the latest version of the labs, and submit any issues you find.
 
