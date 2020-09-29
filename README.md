@@ -1,4 +1,4 @@
-# D084 - Cloud Platform Solutions 
+# Cloud Platform Solutions 
 ### (Originally posted by the Azure Administrator Courseware Team from MicrosoftLearning, adapted to accommodate for 
 
 > **Please note: These labs require that you have an account with Azure. If you do not have an existing subscription, sign up for a free trial**
