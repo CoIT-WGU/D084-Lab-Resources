@@ -1,5 +1,5 @@
 # Cloud Platform Solutions 
-### (Originally posted by the Azure Administrator Courseware Team from MicrosoftLearning)
+### Originally posted by the Azure Administrator Courseware Team from MicrosoftLearning
 
 > **Please note: These labs require that you have an account with Azure. If you do not have an existing subscription, sign up for a free trial**
 
