@@ -46,11 +46,11 @@ The main tasks for this exercise are as follows:
 
 1. From the lab virtual machine, start Microsoft Edge, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign in by using a Microsoft account that has the Owner role in the Azure subscription you intend to use in this lab.
 
-1. In the Azure portal, navigate to the **New** blade.
+1. In the Azure portal, click **Create a resource**.
 
-1. From the **New** blade, search Azure Marketplace for **Template deployment**.
+1. In the **Search the Marketplace** field, search Azure Marketplace for **Template deployment**.
 
-1. Use the list of search results to navigate to the **Template deployment (deploy using custom templates)** blade, and then click **Create**.
+1. Use the list of search results to navigate to the **Template deployment (deploy using custom templates)** option, and then click **Create**.
 
 1. On the **Custom deployment** blade, click the **Build your own template in the editor** link. If you do not see this link, click **Edit template** instead.
 
@@ -74,7 +74,7 @@ The main tasks for this exercise are as follows:
 
     - Location: the name of the Azure region which is closest to the lab location and where you can provision Azure VMs
 
-    - Vm Size: use **Standard_DS1_v2** or **Standard_DS2_v2**, based on the instructor's recommendations
+    - Vm Size: **Standard_DS1_v2**
 
     - Vm1Name: **az1000401-vm1**
 
@@ -121,7 +121,7 @@ The main tasks for this exercise are as follows:
 
     - Location: the name of the Azure region which you selected in the previous task
 
-    - Vm Size: use **Standard_DS1_v2** or **Standard_DS2_v2**, based on the instructor's recommendations
+    - Vm Size: **Standard_DS1_v2**
 
     - VmName: **az1000402-vm3**
 
@@ -227,7 +227,11 @@ The main tasks for this exercise are as follows:
 
     - Location: the same Azure region in which you created the virtual networks
 
-    - Virtual network gateway route propagation: **Disabled**
+    - Propogate gateway routes: **No**
+
+1. Click **Review + create**.
+
+1. Click **Create**.
 
 1. In the Azure portal, navigate to the **az1000402-rt1** blade.
 
@@ -269,6 +273,8 @@ The main tasks for this exercise are as follows:
     > **Note**: If you receive an error message **There may be a version mismatch between this computer and the destination server or VHD** once you select the **Remote Access**  checkbox on the **Server Roles** page of the **Add Roles and Features Wizard**, clear the checkbox, click **Next**, click **Previous** and select the **Remote Access**  checkbox again.
 
 1. Within the Remote Desktop session to **az1000401-vm2**, from Server Manager, select **Tools** start the **Routing and Remote Access** console.
+
+> **Note**: If you receive an error message indicating you may need to manually open the port of Routing and Remote Access in the Windows Firewall, click OK and try to start the service. If it is not successful, open the 
 
 1. In the **Routing and Remote Access** console, right click on the server name and select **Configure and Enable Routing and Remote Access**, Select **Next** use the **Custom configuration** then **Next**, enable **LAN routing** then **Next**, click **Finish** and the click **Start Service**.
 
