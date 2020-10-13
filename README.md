@@ -4,8 +4,10 @@
 
 > **To successfully complete the labs for this course, you will need to first download the lab files by clicking [this link](https://github.com/BGarza-CoIT/D084-Lab-Resources/archive/master.zip).  The lab instructions should be opened with a browser, and indicates when you will need to reference each file to successfully complete each exercise.**
 
+<br />
 This repository will include the following labs:
 
+<br />
 -  Azure Event Grid and Azure Logic Apps
 -  Azure AD Identity Protection
 -  Azure Network Watcher
