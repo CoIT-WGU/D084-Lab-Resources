@@ -12,11 +12,11 @@ All tasks in this lab are performed from the Azure portal (including a PowerShel
 
 Lab files:
 
-  -  **Labfiles\\Module_02\\Deploy_and_Manage_Virtual_Machines\\az-100-03_azuredeploy.json**
+  -  **Labfiles\\Module_02\\Deploy_and_Manage_Virtual_Machines\\azuredeploy.json**
 
-  -  **Labfiles\\Module_02\\Deploy_and_Manage_Virtual_Machines\\az-100-03_azuredeploy.parameters.json**
+  -  **Labfiles\\Module_02\\Deploy_and_Manage_Virtual_Machines\\azuredeploy.parameters.json**
 
-  -  **Labfiles\\Module_02\\Deploy_and_Manage_Virtual_Machines\\az-100-03_install_iis_vmss.zip**
+  -  **Labfiles\\Module_02\\Deploy_and_Manage_Virtual_Machines\\install_iis_vmss.zip**
 
 ### Scenario
 
@@ -233,7 +233,7 @@ The main tasks for this exercise are as follows:
 
 1. On the **Custom deployment** blade, click the **Build your own template in the editor** link. If you do not see this link, click **Edit template** instead.
 
-1. From the **Edit template** blade, load the template file **Labfiles\\Module_02\\Deploy_and_Manage_Virtual_Machines\\az-100-03_azuredeploy.json**.
+1. From the **Edit template** blade, load the template file **Labfiles\\Module_02\\Deploy_and_Manage_Virtual_Machines\\azuredeploy.json**.
 
      > **Note**: Review the content of the template and note that it defines deployment of two Azure VMs hosting Linux Ubuntu into an availability set and into the existing virtual network **az1000301-vnet0**. This virtual network does not exist in your deployment. You will be changing the virtual network name in the parameters below.
 
@@ -241,7 +241,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **Custom deployment** blade, click **Edit parameters**.
 
-1. From the **Edit parameters** blade, load the parameters file **Labfiles\\Module_02\\Deploy_and_Manage_Virtual_Machines\\az-100-03_azuredeploy.parameters.json**.
+1. From the **Edit parameters** blade, load the parameters file **Labfiles\\Module_02\\Deploy_and_Manage_Virtual_Machines\\azuredeploy.parameters.json**.
 
 1. **Save** the parameters and return to the **Custom deployment** blade.
 
@@ -406,7 +406,7 @@ The main tasks for this exercise are as follows:
      > **Note**: The default configuration consisting of built-in rules allows inbound connections within the Azure virtual network environment (including connections via the SSH port TCP 22).
 
 
-> **Result**: After you completed this exercise, you have configured static private and public IP addresses of Azure VMs, connected to an Azure VM running Windows Server 2016 Datacenter via a public IP address, and connect to an Azure VM running Linux Ubuntu Server via a private IP address
+> **Result**: After you completed this exercise, you have configured static private and public IP addresses of Azure VMs, connected to an Azure VM running Windows Server 2016 Datacenter via a public IP address, and connect to an Azure VM running Linux Ubuntu Server via a private IP address.
 
 
 
@@ -434,7 +434,7 @@ The main tasks for this exercise are as follows:
 
 1. Verify that the command returned **True**. If not, rerun the same command with a different value of the &lt;custom-label&gt; until the command returns **True**.
 
-1. Note the value of the &lt;custom-label&gt; that resulted in the successful outcome. You will need it in the next task
+1. Note the value of the &lt;custom-label&gt; that resulted in the successful outcome. You will need it in the next task.
 
 
 #### Task 2: Deploy an Azure VM scale set
@@ -556,9 +556,9 @@ The main tasks for this exercise are as follows:
 
 1. From the **az1000303vmss0 - Extensions** blade, add the **PowerShell Desired State Configuration** extension with the following settings, and click **OK**:
 
-    - Configuration Modules or Script: Browse to **Labfiles\\Module_02\\Deploy_and_Manage_Virtual_Machines\\az-100-03_install_iis_vmss.zip** and click **Open**
+    - Configuration Modules or Script: Browse to **Labfiles\\Module_02\\Deploy_and_Manage_Virtual_Machines\\install_iis_vmss.zip** and click **Open**
 
-    - Module-qualified Name of Configuration: **az-100-03_install_iis_vmss.ps1\\IISInstall**
+    - Module-qualified Name of Configuration: **install_iis_vmss.ps1\\IISInstall**
 
     - Configuration Arguments: leave blank
 
