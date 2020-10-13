@@ -7,7 +7,6 @@
 <br />
 This repository will include the following labs:
 
-<br />
 -  Azure Event Grid and Azure Logic Apps
 -  Azure AD Identity Protection
 -  Azure Network Watcher
