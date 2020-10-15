@@ -12,7 +12,7 @@ All tasks in this lab are performed from the Azure portal (including a PowerShel
 
 Lab files:
 
--  **There are no lab files necessary for this lab.**
+-  **There are no lab files necessary for this lab**
 
 ### Scenario
 
