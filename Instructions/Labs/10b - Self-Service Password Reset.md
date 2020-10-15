@@ -8,7 +8,9 @@ lab:
 
 All tasks in this lab are performed from the Azure portal
 
-Lab files: none
+Lab files:
+
+-  **No lab files necessary to complete this lab**
 
 ### Scenario
 
