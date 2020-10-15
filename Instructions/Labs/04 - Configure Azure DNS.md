@@ -12,11 +12,11 @@ All tasks in this lab are performed from the Azure portal (including a PowerShel
 
 Lab files:
 
- -  **Labfiles\\Module_04\\Configure_Azure_DNS\\az-100-04b_01_azuredeploy.json**
+ -  **Labfiles\\Module_04\\Configure_Azure_DNS\\b_01_azuredeploy.json**
 
- -  **Labfiles\\Module_04\\Configure_Azure_DNS\\az-100-04b_02_azuredeploy.json**
+ -  **Labfiles\\Module_04\\Configure_Azure_DNS\\b_02_azuredeploy.json**
 
- -  **Labfiles\\Module_04\\Configure_Azure_DNS\\az-100-04_azuredeploy.parameters.json**
+ -  **Labfiles\\Module_04\\Configure_Azure_DNS\\azuredeploy.parameters.json**
 
 
 ### Scenario
@@ -208,20 +208,20 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Deploy Azure VMs into virtual networks
 
-1. In the Cloud Shell pane, upload the **az-100-04b_01_azuredeploy.json**, **az-100-04b_02_azuredeploy.json**, and **az-100-04_azuredeploy.parameters.json** files from the **Labfiles\\Module_04\\Configure_Azure_DNS** folder.
+1. In the Cloud Shell pane, upload the **b_01_azuredeploy.json**, **b_02_azuredeploy.json**, and **azuredeploy.parameters.json** files from the **Labfiles\\Module_04\\Configure_Azure_DNS** folder.
 
 1. In the Cloud Shell pane, run the following in order to deploy an Azure VM into the first virtual network:
 
    ```powershell
    cd $home
 
-   New-AzResourceGroupDeployment -ResourceGroupName $rg2.ResourceGroupName -TemplateFile "./az-100-04b_01_azuredeploy.json" -TemplateParameterFile "./az-100-04_azuredeploy.parameters.json" -AsJob
+   New-AzResourceGroupDeployment -ResourceGroupName $rg2.ResourceGroupName -TemplateFile "./b_01_azuredeploy.json" -TemplateParameterFile "./azuredeploy.parameters.json" -AsJob
    ```
 
 1. In the Cloud Shell pane, run the following in order to deploy an Azure VM into the second virtual network:
 
    ```powershell
-   New-AzResourceGroupDeployment -ResourceGroupName $rg2.ResourceGroupName -TemplateFile "./az-100-04b_02_azuredeploy.json" -TemplateParameterFile "./az-100-04_azuredeploy.parameters.json" -AsJob
+   New-AzResourceGroupDeployment -ResourceGroupName $rg2.ResourceGroupName -TemplateFile "./b_02_azuredeploy.json" -TemplateParameterFile "./azuredeploy.parameters.json" -AsJob
    ```
 
 > **Note**: Wait for both deployments to complete before you proceed to the next task. You can identify the state of the jobs by running the `Get-Job` cmdlet in the Cloud Shell pane.
