@@ -10,7 +10,9 @@ All tasks in this lab are performed from the Azure portal (including a PowerShel
 
    > **Note**: When not using Cloud Shell, the lab virtual machine must have the Azure PowerShell 1.2.0 module (or newer) installed [https://docs.microsoft.com/en-us/powershell/azure/install-az-ps](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps)
 
-Lab files: none
+Lab files:
+
+-  **No lab files are necessary to complete this lab**
 
 ### Scenario
 
