@@ -12,9 +12,9 @@ All tasks in this lab are performed from the Azure portal (including a PowerShel
 
 Lab files:
 
- -  **Labfiles\\Module_03\\Implement_and_Manage_Storage\\az-100-02_azuredeploy.json**
+ -  **Labfiles\\Module_03\\Implement_and_Manage_Storage\\azuredeploy.json**
 
- -  **Labfiles\\Module_03\\Implement_and_Manage_Storage\\az-100-02_azuredeploy.parameters.json**
+ -  **Labfiles\\Module_03\\Implement_and_Manage_Storage\\azuredeploy.parameters.json**
 
 ### Scenario
 
@@ -63,7 +63,7 @@ The main tasks for this exercise are as follows:
 
 1. On the **Custom deployment** blade, click the **Build your own template in the editor** link. If you do not see this link, click **Edit template** instead.
 
-1. From the **Edit template** blade, load the template file **Labfiles\\Module_03\\Implement_and_Manage_Storage\\az-100-02_azuredeploy.json**.
+1. From the **Edit template** blade, load the template file **Labfiles\\Module_03\\Implement_and_Manage_Storage\\azuredeploy.json**.
 
       > **Note**: Review the content of the template and note that it defines deployment of an Azure VM hosting Windows Server 2016 Datacenter.
 
@@ -71,7 +71,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **Custom deployment** blade, navigate to the **Edit parameters** blade.
 
-1. From the **Edit parameters** blade, load the parameters file **Labfiles\\Module_03\\Implement_and_Manage_Storage\\az-100-02_azuredeploy.parameters.json**.
+1. From the **Edit parameters** blade, load the parameters file **Labfiles\\Module_03\\Implement_and_Manage_Storage\\azuredeploy.parameters.json**.
 
 1. Save the parameters and return to the **Custom deployment** blade.
 
@@ -207,7 +207,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **Containers** blade of the first storage account, create a new container named **az1000202-container** with the **Public access level** set to **Private (no anonymous access)**.
 
-1. From the **az1000202-container** blade, upload **Labfiles\\Module_03\\Implement_and_Manage_Storage\\az-100-02_azuredeploy.json** and **Labfiles\\Module_03\\Implement_and_Manage_Storage\\az-100-02_azuredeploy.parameters.json** into the container.
+1. From the **az1000202-container** blade, upload **Labfiles\\Module_03\\Implement_and_Manage_Storage\\azuredeploy.json** and **Labfiles\\Module_03\\Implement_and_Manage_Storage\\azuredeploy.parameters.json** into the container.
 
 
 #### Task 4: Copy a container and blobs between Azure Storage accounts
@@ -262,15 +262,15 @@ The main tasks for this exercise are as follows:
 
 #### Task 5: Use a Shared Access Signature (SAS) key to access a blob
 
-1. From the **Containers** blade of the second storage account, navigate to the container **az1000202-container**, and then open the **az-100-02_azuredeploy.json** blade.
+1. From the **Containers** blade of the second storage account, navigate to the container **az1000202-container**, and then open the **azuredeploy.json** blade.
 
-1. On the **az-100-02_azuredeploy.json** blade, copy the value of the **URL** property.
+1. On the **azuredeploy.json** blade, copy the value of the **URL** property.
 
 1. Open another Microsoft Edge window and navigate to the URL you copied in the previous step.
 
       > **Note**: The browser will display the **ResourceNotFound**. This is expected since the container has the **Public access level** set to **Private (no anonymous access)**.
 
-1. On the **az-100-02_azuredeploy.json** blade, generate a shared access signature (SAS) and the corresponding URL with the following settings:
+1. On the **azuredeploy.json** blade, generate a shared access signature (SAS) and the corresponding URL with the following settings:
 
     - Permissions: **Read**
 
@@ -284,11 +284,11 @@ The main tasks for this exercise are as follows:
 
     - Signing key: **Key 1**
 
-1. On the **az-100-02_azuredeploy.json** blade, copy **Blob SAS URL**.
+1. On the **azuredeploy.json** blade, copy **Blob SAS URL**.
 
 1. From the previously opened Microsoft Edge window, navigate to the URL you copied in the previous step.
 
-      > **Note**: This time, you will be prompted whether you want to open or save **az-100-02_azuredeploy.json**. This is expected as well, since this time you are no longer accessing the container anonymously, but instead you are using the newly generated SAS key, which is valid for the next 24 hours.
+      > **Note**: This time, you will be prompted whether you want to open or save **azuredeploy.json**. This is expected as well, since this time you are no longer accessing the container anonymously, but instead you are using the newly generated SAS key, which is valid for the next 24 hours.
 
 1. Close the Microsoft Edge window displaying the prompt.
 
