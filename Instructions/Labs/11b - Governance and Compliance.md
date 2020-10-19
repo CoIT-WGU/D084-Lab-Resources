@@ -12,9 +12,9 @@ All tasks in this lab are performed from the Azure portal (including a PowerShel
 
 Lab files:
 
--  **Labfiles\\Module_11\\Governance_and_Compliance\\az-100-01b_azuredeploy.json**
+-  **Labfiles\\Module_11\\Governance_and_Compliance\\azuredeploy.json**
 
--  **Labfiles\\Module_11\\Governance_and_Compliance\\az-100-01b_azuredeploy.parameters.json**
+-  **Labfiles\\Module_11\\Governance_and_Compliance\\azuredeploy.parameters.json**
 
 ### Scenario
 
@@ -59,7 +59,7 @@ The main tasks for this exercise are as follows:
 
 1. On the **Custom deployment** blade, select the **Build your own template in the editor**.
 
-1. From the **Edit template** blade, load the template file **Labfiles\\Module_11\\Governance_and_Compliance\\az-100-01b_azuredeploy.json**.
+1. From the **Edit template** blade, load the template file **Labfiles\\Module_11\\Governance_and_Compliance\\azuredeploy.json**.
 
     > **Note**: Review the content of the template and note that it defines deployment of an Azure VM hosting Windows Server 2016 Datacenter, including tags on some of its resources.
 
@@ -67,7 +67,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **Custom deployment** blade, navigate to the **Edit parameters** blade.
 
-1. From the **Edit parameters** blade, load the parameters file **Labfiles\\Module_11\\Governance_and_Compliance\\az-100-01b_azuredeploy.parameters.json**.
+1. From the **Edit parameters** blade, load the parameters file **Labfiles\\Module_11\\Governance_and_Compliance\\azuredeploy.parameters.json**.
 
 1. Save the parameters and return to the **Custom deployment** blade.
 
@@ -223,7 +223,7 @@ The main tasks for this exercise are as follows:
 
 1. On the **Custom deployment** blade, select the **Build your own template in the editor**.
 
-1. From the **Edit template** blade, load the template file **Labfiles\\Module_11\\Governance_and_Compliance\\az-100-01b_azuredeploy.json**.
+1. From the **Edit template** blade, load the template file **Labfiles\\Module_11\\Governance_and_Compliance\\azuredeploy.json**.
 
     > **Note**: This is the same template that you used for deployment in the first task of this exercise.
 
@@ -231,7 +231,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **Custom deployment** blade, navigate to the **Edit parameters** blade.
 
-1. From the **Edit parameters** blade, load the parameters file **Labfiles\\Module_11\\Governance_and_Compliance\\az-100-01b_azuredeploy.parameters.json**.
+1. From the **Edit parameters** blade, load the parameters file **Labfiles\\Module_11\\Governance_and_Compliance\\azuredeploy.parameters.json**.
 
 1. Save the parameters and return to the **Custom deployment** blade.
 
@@ -315,7 +315,7 @@ The main tasks for this exercise are as follows:
 
 1. On the **Custom deployment** blade, select the **Build your own template in the editor**.
 
-1. From the **Edit template** blade, load the template file **Labfiles\\Module_11\\Governance_and_Compliance\\az-100-01b_azuredeploy.json**.
+1. From the **Edit template** blade, load the template file **Labfiles\\Module_11\\Governance_and_Compliance\\azuredeploy.json**.
 
     > **Note**: This is the same template that you used for deployment in the first task of this exercise.
 
@@ -323,7 +323,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **Custom deployment** blade, navigate to the **Edit parameters** blade.
 
-1. From the **Edit parameters** blade, load the parameters file **Labfiles\\Module_11\\Governance_and_Compliance\\az-100-01b_azuredeploy.parameters.json**.
+1. From the **Edit parameters** blade, load the parameters file **Labfiles\\Module_11\\Governance_and_Compliance\\azuredeploy.parameters.json**.
 
 1. Save the parameters and return to the **Custom deployment** blade.
 
