@@ -8,30 +8,20 @@
 
 This repository will include the following labs:
 
--  Azure Event Grid and Azure Logic Apps
 -  Azure AD Identity Protection
 -  Azure Network Watcher
 -  Configure Azure DNS
 -  Deploy and Manage Virtual Machines
 -  Governance and Compliance
--  Implement and Manage Azure Web Apps
 -  Implement ASR Between Regions
 -  Implement Directory Synchronization
 -  Implementing File Sync
 -  Implement and Manage Storage
 -  Load Balancer and Traffic Manager
--  Migrate On-premises Hyper-V VMs to Azure
 -  Role-Based Access Control
 -  Self-Service Password Reset
--  Virtual Machines and Scale Sets
 -  VNet Peering and Service Chaining
 
-Note that the following labs will not be part of the AZ-103 course:
-
--  Azure Event Grid and Azure Logic Apps
--  Implement and Manage Azure Web Apps
--  Migrate On-premises Hyper-V VMs to Azure
--  Privileged Identity Management
 
 **What are we doing?**
 
