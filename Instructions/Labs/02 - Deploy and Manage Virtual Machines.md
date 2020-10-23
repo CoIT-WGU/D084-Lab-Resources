@@ -50,11 +50,9 @@ The main tasks for this exercise are as follows:
 
 1. From the lab virtual machine, start Microsoft Edge, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign in by using a Microsoft account that has the Owner role in the Azure subscription you intend to use in this lab.
 
-1. In the Azure portal, navigate to the **New** blade.
+1. In the Azure portal home page, click **Create a resource**.
 
-1. From the **New** blade, search Azure Marketplace for **Windows Server**. Select **Windows Server** from the search results list.
-
-1. On the Windows Server page, use the drop-down menu to select **Windows Server 2016 Datacenter**, and then click **Create**.
+1. From the **New** blade, click **Windows Server 2016 Datacenter**.
 
 1. Use the **Create a virtual machine** blade to deploy a virtual machine with the following settings:
 
@@ -78,9 +76,9 @@ The main tasks for this exercise are as follows:
 
        - Update domains: **5**
 
-    - Image: **Windows Server 2016 Datacenter**
+    - Image: **Windows Server 2016 Datacenter - Gen1**
 
-    - Size: **Standard DS2_v2**
+    - Size: **Standard DS1_v2**
 
     - Username: **Student**
 
@@ -108,7 +106,7 @@ The main tasks for this exercise are as follows:
 
 1. Click **Next: Management >**.
 
-1. On the Management tab, set **Boot diagnostics** to **Off** and leave all other settings with their default vaules. 
+1. On the Management tab, set **Boot diagnostics** to **Disable** and leave all other settings with their default vaules. 
 
 1. Click **Next: Advanced >**.
 
@@ -118,8 +116,7 @@ The main tasks for this exercise are as follows:
 
 1. Click **Create**.
 
-> **Note**: You will configure the network security group you create in this task in the second exercise of this lab
-
+> **Note**: The current configuration will not permit access to the virtual machine you created yet. You will configure the necessary network security group later in the second exercise of this lab.
 
 > **Note**: Wait for the deployment to complete before you proceed to the next task. This should take about 5 minutes.
 
@@ -134,7 +131,7 @@ The main tasks for this exercise are as follows:
 
    ```powershell
    $vmName = 'az1000301-vm1'
-   $vmSize = 'Standard_DS2_v2'
+   $vmSize = 'Standard_DS1_v2'
    ```
 
      > **Note**: This sets the values of variables designating the Azure VM name and its size
@@ -225,7 +222,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Deploy two Azure VMs running Linux into an availability set by using an Azure Resource Manager template
 
-1. In the Azure portal, navigate to the **New** blade.
+1. In the Azure portal home page, click **Create a resource**.
 
 1. From the **New** blade, search Azure Marketplace for **Template deployment**, and select **Template deployment (deploy using custom templates)**.
 
@@ -277,6 +274,8 @@ The main tasks for this exercise are as follows:
 
     - Subnet Name: **subnet0**
 
+> Click **Review + create**.
+
 
 > **Note**: Wait for the deployment to complete before you proceed to the next task. This should take about 5 minutes.
 
@@ -302,11 +301,11 @@ The main tasks for this exercise are as follows:
 
 1. In the Azure portal, navigate to the **az1000301-vm0** blade.
 
-1. From the **az1000301-vm0** blade, navigate to the **Networking** blade, displaying the configuration of the public IP address **az1000301-vm0-ip**, assigned to its network interface.
+1. From the **az1000301-vm0** blade, navigate to the **Networking** blade, displaying the configuration of the NIC Public IP address assigned to its network interface.
 
 1. From the **Networking** blade, click the link representing the public IP address.
 
-1. On the az1000301-vm0-ip blade, click **Configuration**.
+1. On the **az1000301-vm0-ip** blade, click **Configuration**.
 
 1. Change the assignment of the public IP address to **Static**, and then click **Save**.
 
@@ -323,7 +322,6 @@ The main tasks for this exercise are as follows:
 1. On the **IP configurations** blade, configure the **ipconfig1** private IP address to be static and set it to **10.103.0.100**, and then click **Save**.
 
      > **Note**: Changing the private IP address assignment requires restarting the Azure VM.
-
 
      > **Note**: It is possible to connect to Azure VMs via either statically or dynamically assigned public and private IP addresses. Choosing static IP assignment is commonly done in scenarios where these IP addresses are used in combination with IP filtering, routing, or if they are assigned to network interfaces of Azure VMs that function as DNS servers.
 
@@ -383,7 +381,7 @@ The main tasks for this exercise are as follows:
 
 1. Within the RDP session to **az1000301-vm0**, from Server Manager, click **Local Server**, then disable **IE Enhanced Security Configuration**.
 
-1. Within the RDP session to **az1000301-vm0**, download and install **putty.exe** from [**https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html**](https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html)
+1. Within the RDP session to **az1000301-vm0**, download and install **putty.exe** from [**https://assets.ctfassets.net/0lvk5dbamxpi/8MzvQclOByNI21CzVTjSp/8f3b5d5c1105b8f40e44f2ea798f072b/putty-64bit-0.73-installer.msi**](https://assets.ctfassets.net/0lvk5dbamxpi/8MzvQclOByNI21CzVTjSp/8f3b5d5c1105b8f40e44f2ea798f072b/putty-64bit-0.73-installer.msi)
 
 1. Use **putty.exe** to verify that you can successfully connect to **az1000302-vm0** on its private IP address(**10.103.0.100**) via the **SSH** protocol (TCP 22).
 
@@ -406,8 +404,39 @@ The main tasks for this exercise are as follows:
      > **Note**: The default configuration consisting of built-in rules allows inbound connections within the Azure virtual network environment (including connections via the SSH port TCP 22).
 
 
-> **Result**: After you completed this exercise, you have configured static private and public IP addresses of Azure VMs, connected to an Azure VM running Windows Server 2016 Datacenter via a public IP address, and connect to an Azure VM running Linux Ubuntu Server via a private IP address.
+> **Result**: After you completed tasks 1 through 3 of this exercise, you have configured static private and public IP addresses of Azure VMs, connected to an Azure VM running Windows Server 2016 Datacenter via a public IP address, and connect to an Azure VM running Linux Ubuntu Server via a private IP address.
 
+#### Task 4: Use Cloud Shell to delete resources
+
+> Note: The resources created so far need to be deallocated to make sure you do not exceed the vCPU quota for the subscription.
+
+1. At the top of the portal, click the **Cloud Shell** icon to open the Cloud Shell pane.
+
+1. At the Cloud Shell interface, select **Bash**, and then click **Confirm**.
+
+1. At the **Cloud Shell** command prompt, type in the following command and press **Enter** to list all resource groups you created in this lab:
+
+   ```sh
+   az group list --query "[?starts_with(name,'az1000')].name" --output tsv
+   ```
+
+1. Verify that the output contains only the resource groups you created in this lab so far.
+
+1. At the **Cloud Shell** command prompt, type in the following command and press **Enter** to delete the resource groups you created in this lab
+
+   ```sh
+   az group list --query "[?starts_with(name,'az1000')].name" --output tsv | xargs -L1 bash -c 'az group delete --name $0 --no-wait --yes'
+   ```
+   
+    > **Note**: The command command executes asynchronously (as determined by the --nowait parameter), so it might take a few minutes before all of the resource groups are removed.
+
+
+    > **Note**: You might have to rerun the command if the resources are not deleted after the first run.
+
+1. Close the **Cloud Shell** prompt at the bottom of the portal.
+
+
+> **Result**: In this exercise, you removed the resources used in this lab.
 
 
 ### Exercise 3: Deploy and configure Azure VM scale sets
@@ -439,11 +468,11 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Deploy an Azure VM scale set
 
-1. In the Azure portal, navigate to the **New** blade.
+1. In the Azure portal, click **Create a resource**.
 
 1. From the **New** blade, search Azure Marketplace for **Virtual machine scale set**.
 
-1. Use the list of search results to navigate to the **Create virtual machine scale set** blade.
+1. Click the **Create virtual machine scale set** blade, then click **Create**.
 
 1. On the **Create virtual machine scale set** blade **Basics** tab, use the following settings:
 
@@ -457,11 +486,11 @@ The main tasks for this exercise are as follows:
 
     - Availability zone: **None**
 
-    - Image: **Windows Server 2016 Datacenter**
+    - Image: **Windows Server 2016 Datacenter - Gen1**
 
     - Azure Spot instance: **No**
 
-    - Size: **DS2 v2**
+    - Size: **Standard_DS1_v2**
 
     - Username: **Student**
 
@@ -525,7 +554,7 @@ The main tasks for this exercise are as follows:
 
     - Scaling policy: **Manual**
 
-    - Scale-in policy: **Default**
+    - Scale-in policy: **Default - Balance across availability zones and fault domains, then delete VM with highest instance ID**
 
 1. Click **Next : Management &gt;** and use the following settings:
 
@@ -550,7 +579,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Install IIS on a scale set VM by using DSC extensions
 
-1. In the Azure portal, navigate to the **az1000303vmss0** blade.
+1. In the Azure portal, navigate to the **az1000303vmss0** Virtual machine scale set blade.
 
 1. From the **az1000303vmss0** blade, display its **Extensions** blade.
 
