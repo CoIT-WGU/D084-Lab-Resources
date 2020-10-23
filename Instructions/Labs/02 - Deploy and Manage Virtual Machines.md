@@ -234,7 +234,7 @@ The main tasks for this exercise are as follows:
 
      > **Note**: Review the content of the template and note that it defines deployment of two Azure VMs hosting Linux Ubuntu into an availability set and into the existing virtual network **az1000301-vnet0**. This virtual network does not exist in your deployment. You will be changing the virtual network name in the parameters below.
 
-1. **Save** the template and return to the **Custom deployment** blade.
+1. Save the template and return to the **Custom deployment** blade.
 
 1. From the **Custom deployment** blade, click **Edit parameters**.
 
@@ -266,7 +266,7 @@ The main tasks for this exercise are as follows:
 
     - Image SKU: **16.04.0-LTS**
 
-    - Vm Size: **Standard_DS2_v2**
+    - Vm Size: **Standard_DS1_v2**
 
     - Virtual Network Name: **az1000301-RG-vnet**
 
