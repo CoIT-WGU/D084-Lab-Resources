@@ -23,19 +23,48 @@ This repository will include the following labs:
 -  VNet Peering and Service Chaining
 
 
-**What are we doing?**
+## Lab Preparation
+
+#### Task 0: 
+
+1. Log into your [Azure portal](https://www.portal.azure.com) and click **Create a new resource**.
+
+1. Within the **New** blade, search Azure Marketplace for **storage account**, and select **Storage accounts**.
+
+1. Click **Create**.
+
+1. From the **Create storage account** blade, create an account with the following:
+
+    - Subscription: the name of the subscription you are using in this lab
+  
+    - Resource Group: Click **Create new** and set the name of the resource group to: **azlabfiles-RG**, and click **OK**.
+  
+    - Storage account name: **azlabfiles&lt;lastname&gt;&lt;MM&gt;&lt;DD&gt;**.
+    
+        * lastname = your last name | MM = two-digit month | DD = two-digit date.  For example, John Smith creating a storage account on October 26 would be **azlabfilessmith1026**.
+  
+1. Leave everything else as default. Click **Review + create**.
+  
+1. Click **Create** once the validation completes.
+
+1. Once you receive a notification that your deployment is complete, click **Go to resource**.
+
+1. Click the **Data transfer** blade.
+
+1. Click **\+Container**.
+
+1. In the **New container** pane that opens on the right side, type **az-labfile-cn**. Then click **Create**.
+
+1. Click on **az-labfile-fs** and within the blade, click **Upload**.
+
 
 *	We are publishing the lab instructions and lab files on GitHub to afford us the opportunity to scale, version, and stay up-to-date. We hope this will help keep the content current as the Azure platform changes.
 
 *	Within each repository there are lab guides in the Markdown format in the Instructions folder. If appropriate, there are also additional files that are needed to complete the lab within the Allfiles\Labfiles folder. Not every course has corresponding lab files.
 
-**How are we doing?**
-
-*	If as you are progressing through these courses, you identify areas for improvement, please use the Issues tab to provide feedback. We will periodically create new files to incorporate the changes.
-
 **General comments regarding the labs in this course**
 
-* Although not required, it is a good idea to deprovision any existing resources when you have completed each lab. This will help mitigate the risk of exceeding the default CPU quota limits and minimize usage charges.
+* Throughout, and after completing each module, we ask you deprovision all resources created as you progress. This will help mitigate the risk of exceeding the default CPU quota limits and minimize usage charges.
 
 * Availability of Azure regions and resources in these regions depends to some extents on the type of subscription you are using. To identify Azure regions available in your subscription, refer to https://azure.microsoft.com/en-us/regions/offers/. To identify resources available in these regions, refer to https://azure.microsoft.com/en-us/global-infrastructure/services/. These restrictions might result in failures during template validation or template deployment, in particular when provisioning Azure VMs. If this happens, review error messages and retry deployment with a different VM size or a different region.
 
