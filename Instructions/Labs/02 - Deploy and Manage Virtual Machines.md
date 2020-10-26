@@ -48,7 +48,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Deploy an Azure VM running Windows Server 2016 Datacenter into an availability set by using the Azure portal
 
-1. From the lab virtual machine, start Microsoft Edge, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign in by using a Microsoft account that has the Owner role in the Azure subscription you intend to use in this lab.
+1. Open a browser and navigate to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign in by using a Microsoft account that has the Owner role in the Azure subscription you intend to use in this lab.
 
 1. In the Azure portal home page, click **Create a resource**.
 
