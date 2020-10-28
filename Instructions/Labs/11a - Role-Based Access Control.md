@@ -77,9 +77,9 @@ The main tasks for this exercise are as follows:
 
     - Department: not set
 
-1. From the **Users - All users** blade, navigate to the **Groups - All groups** blade.
+1. From the **Default Directory** blade, navigate to the **Groups - All groups** blade.
 
-1. From the **Groups - All groups** blade, create a new group with the following settings:
+1. From the **Default Directory** blade, create a new group with the following settings:
 
     - Group type: **Security**
 
@@ -127,7 +127,7 @@ The main tasks for this exercise are as follows:
 
     - Role: **Contributor**
 
-    - Assign access to: **Azure AD user, group, or service principal**
+    - Assign access to: **User, group, or service principal**
 
     - Select: **az1001 Contributors**
 
@@ -136,7 +136,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **az1000101-RG** blade, display its **Policies** blade.
 
-1. From the **Policy - Compliance** blade, display the **Assign policy** blade.
+1. From the **Policy - Compliance** blade, click the **Assign policy** blade.
 
 1. Assign the policy with the following settings:
 
