@@ -150,7 +150,7 @@ The main tasks for this exercise are as follows:
 
      - Assignment name: **Allowed virtual machine SKUs**
 
-     - Description: **Allowed selected virtual machine SKUs (Standard_DS1_v2)**
+     - Description: **Allowed selected virtual machine size SKUs (Standard_DS1_v2)**
 
      - Policy enforcement: **Enabled**
 
@@ -162,7 +162,8 @@ The main tasks for this exercise are as follows:
 
    - Remediation tab:
 
-     - Create a Managed Identity: leave the entry blank
+     - Create a Managed Identity: Select checkbox
+     - Managed identity location: "East US"
 
 
 > **Result**: After you completed this exercise, you have created an Azure AD user and an Azure AD group, created two Azure resource groups, delegated management of the first Azure resource group via the built-in Azure VM Contributor RBAC role, and assigned to the same resource group the built-in Azure policy restricting SKUs that can be used for Azure VMs.
