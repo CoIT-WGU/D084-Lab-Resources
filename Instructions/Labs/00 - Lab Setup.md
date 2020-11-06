@@ -27,7 +27,7 @@ This repository will include the following labs:
 
 ## Lab Preparation
 
-#### Task: 
+### Task 
 
 1. Download the lab files by clicking [this link](https://github.com/CoIT-WGU/D084-Lab-Resources/archive/master.zip) and extract the contents. **Note the location you save this directory as you will need it later.**
 
