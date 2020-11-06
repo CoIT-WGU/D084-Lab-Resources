@@ -61,7 +61,7 @@ This repository will include the following labs:
 
 1. Click **Upload folder...**.
 
-1. Navigate to **D084-Lab-Resources-master\Allfiles**. 
+1. Navigate to **D084-Lab-Resources-master\Allfiles** in your File Explorer. 
 
 1. Select **LabFiles**, then click **Upload** you documented from step 1.
 
