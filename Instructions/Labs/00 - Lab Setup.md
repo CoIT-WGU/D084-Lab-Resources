@@ -4,7 +4,7 @@
 
 >
 
-**The lab instructions listed within [this link](https://github.com/CoIT-WGU/D084-Lab-Resources/tree/master/Instructions/Labs) should be opened with a browser, and indicates when you will need to reference each file to successfully complete each exercise.**
+> **The lab instructions listed within [this link](https://github.com/CoIT-WGU/D084-Lab-Resources/tree/master/Instructions/Labs) should be opened with a browser, and indicates when you will need to reference each file to successfully complete each exercise.**
 
 <br />
 
@@ -27,7 +27,7 @@ This repository will include the following labs:
 
 ## Lab Preparation
 
-#### Task 0: 
+#### Task: 
 
 1. Download the lab files by clicking [this link](https://github.com/BGarza-CoIT/D084-Lab-Resources/archive/master.zip) and extract the contents. **Note the location you save this directory as you will need it later.**
 
@@ -68,4 +68,4 @@ This repository will include the following labs:
 1. Select **LabFiles**, then click **Upload** you documented from step 1.
 
 
-*	Now you should be able to see all of your necessary lab files stored within your Azure File Share to reference as you progress through the labs.
+> **Now you should be able to see all of your necessary lab files stored within your Azure File Share to reference as you progress through the labs**.
