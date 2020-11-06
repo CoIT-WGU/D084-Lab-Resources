@@ -53,6 +53,10 @@ This repository will include the following labs:
 
 1. Once you receive a notification that your deployment is complete, click **Go to resource**.
 
+1. Click the **File shares** blade.
+
+1. Click the **+ File share** blade to create a new file share named *azlabfiles*.  Once the file share is created, click the **Overview** blade.
+
 1. Click the **Open in Explorer** blade.
 
 1. Click **Open Azure Storage Explorer**.
