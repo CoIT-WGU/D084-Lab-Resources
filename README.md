@@ -12,12 +12,11 @@
 
 * Before you perform a template based deployments, you might need to register providers that handle provisioning of resource types referenced in the template. This is a one-time operation (per subscription) required when using Azure Resource Manager templates to deploy resources managed by these resource providers (if these resource providers have not been yet registered). You can perform registration from the subscription's Resource Providers blade in the Azure portal or by using Cloud Shell to run:
 
+PowerShell:
 ```Powershell
-#PowerShell
 Register-AzResourceProvider
 ```
-or 
+or Azure CLI:
 ```PowerShell
-#Command line
 az provider
 ```
