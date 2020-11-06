@@ -2,7 +2,11 @@
 
 > **Please note: These labs require that you have an account with Azure and an Internet connection. If you do not have an existing subscription, sign up for a free trial by clicking [this link](https://azure.microsoft.com/en-us/free) and following the posted instructions.**
 
-> **To successfully complete the labs for this course, you will need to first download the lab files by clicking [this link](https://github.com/BGarza-CoIT/D084-Lab-Resources/archive/master.zip) and extract the contents.  The lab instructions listed within [this link](https://github.com/CoIT-WGU/D084-Lab-Resources/tree/master/Instructions/Labs) should be opened with a browser, and indicates when you will need to reference each file to successfully complete each exercise.**
+> **To successfully complete the labs for this course, you will need to first 
+
+
+
+**The lab instructions listed within [this link](https://github.com/CoIT-WGU/D084-Lab-Resources/tree/master/Instructions/Labs) should be opened with a browser, and indicates when you will need to reference each file to successfully complete each exercise.**
 
 <br />
 
@@ -27,6 +31,8 @@ This repository will include the following labs:
 
 #### Task 0: 
 
+1. Download the lab files by clicking [this link](https://github.com/BGarza-CoIT/D084-Lab-Resources/archive/master.zip) and extract the contents. **Note the location you save this directory as you will need it later.**
+
 1. Log into your [Azure portal](https://www.portal.azure.com) and click **Create a new resource**.
 
 1. Within the **New** blade, search Azure Marketplace for **storage account**, and select **Storage accounts**.
@@ -49,18 +55,23 @@ This repository will include the following labs:
 
 1. Once you receive a notification that your deployment is complete, click **Go to resource**.
 
-1. Click the **Data transfer** blade.
+1. Click the **Open in Explorer** blade.
 
-1. Click **\+Container**.
+1. Click **Open Azure Storage Explorer**.
 
-1. In the **New container** pane that opens on the right side, type **az-labfile-cn**. Then click **Create**.
+1. In the **Explorer** pane, navigate to *\<Your subscription\>\\Storage Accounts\\\<Your storage account name\>*.
 
-1. Click on **az-labfile-fs** and within the blade, click **Upload**.
+1. Click **Upload**.
+
+1. Click **Upload folder...**.
+
+1. Navigate to **D084-Lab-Resources-master\Allfiles**. 
+
+1. Select **LabFiles**, then click **Upload** you documented from step 1.
 
 
-*	We are publishing the lab instructions and lab files on GitHub to afford us the opportunity to scale, version, and stay up-to-date. We hope this will help keep the content current as the Azure platform changes.
+*	Now you should be able to see all of your necessary lab files stored within your Azure File Share to reference as you progress through the labs.
 
-*	Within each repository there are lab guides in the Markdown format in the Instructions folder. If appropriate, there are also additional files that are needed to complete the lab within the Allfiles\Labfiles folder. Not every course has corresponding lab files.
 
 **General comments regarding the labs in this course**
 
