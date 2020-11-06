@@ -112,9 +112,7 @@ The main tasks for this exercise are as follows:
 
 1. On the Advanced tab, review the available options.
 
-1. Leave all settings with their default values, and click **Review + create**.
-
-1. Click **Create**.
+1. Leave all settings with their default values, and click **Review + create**.  Wait for the deployment is verified, then click **Create**..
 
 > **Note**: The current configuration will not permit access to the virtual machine you created yet. You will configure the necessary network security group later in the second exercise of this lab.
 
@@ -436,7 +434,7 @@ The main tasks for this exercise are as follows:
 1. Close the **Cloud Shell** prompt at the bottom of the portal.
 
 
-> **Result**: In this exercise, you removed the resources used in this lab.
+> **Result**: In this exercise, you removed the resources used in this lab so far.
 
 
 ### Exercise 3: Deploy and configure Azure VM scale sets
@@ -457,7 +455,7 @@ The main tasks for this exercise are as follows:
 1. In the Cloud Shell pane, run the following command, substituting the placeholder &lt;custom-label&gt; with any string which is likely to be unique.
 
    ```powershell
-   $rg = Get-AzResourceGroup -Name az1000301-RG
+   $rg = New-AzureRmResourceGroup -Name az1000303-RG -Location \<same region as previous resource groups\>
    Test-AzDnsAvailability -DomainNameLabel <custom-label> -Location $rg.Location
    ```
 
@@ -478,9 +476,9 @@ The main tasks for this exercise are as follows:
 
     - Subscription: the name of the subscription you are using in this lab
 
-    - Resource group: Click **Create new**, set the name to **az1000303-RG** and then click **OK**.
+    - Resource group: Click **Create new**, set the name to **az1000304-RG** and then click **OK**.
 
-    - Virtual machine scale set name: **az1000303vmss0**
+    - Virtual machine scale set name: **az1000304vmss0**
 
     - Region: the same Azure region you chose in the previous exercises of this lab
 
@@ -508,9 +506,9 @@ The main tasks for this exercise are as follows:
 
     - Virtual network: Click **Create new**, use the following settings, and then click **OK**:
 
-        - Name: **az1000303-vnet0**
+        - Name: **az1000304-vnet0**
 
-        - Resource group: **az1000303-RG**
+        - Resource group: **az1000304-RG**
 
         - Address range: **10.203.0.0/16**
 
@@ -520,7 +518,7 @@ The main tasks for this exercise are as follows:
 
     - Click the **edit icon** to the right of the Network interface **az1000303-vnet0-nic01**, use the following settings and then click **OK**:
 
-       - Name: **az1000303-vnet0-nic01**
+       - Name: **az1000304-vnet0-nic01**
 
        - Virtual network: leave default
 
@@ -542,9 +540,9 @@ The main tasks for this exercise are as follows:
 
     - Select a load balancer: Click **Create new**, use the following settings and then click **Create**:
 
-       - Name: **az1000303vmss0-lb**
+       - Name: **az1000304vmss0-lb**
 
-       - Public IP address name: **az1000303vmss0-ip**
+       - Public IP address name: **az1000304vmss0-ip**
 
        - Domain name label: type in the value of the ***&lt;custom-label&gt;*** you identified in the previous task
 
@@ -579,11 +577,11 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Install IIS on a scale set VM by using DSC extensions
 
-1. In the Azure portal, navigate to the **az1000303vmss0** Virtual machine scale set blade.
+1. In the Azure portal, navigate to the **az1000304vmss0** Virtual machine scale set blade.
 
-1. From the **az1000303vmss0** blade, display its **Extensions** blade.
+1. From the **az1000304vmss0** blade, display its **Extensions** blade.
 
-1. From the **az1000303vmss0 - Extensions** blade, add the **PowerShell Desired State Configuration** extension with the following settings, and click **OK**:
+1. From the **az1000304vmss0 - Extensions** blade, add the **PowerShell Desired State Configuration** extension with the following settings, and click **OK**:
 
     - Configuration Modules or Script: Browse to **Labfiles\\Module_02\\Deploy_and_Manage_Virtual_Machines\\install_iis_vmss.zip** and click **Open**
 
@@ -601,13 +599,13 @@ The main tasks for this exercise are as follows:
 
     - Auto Upgrade Minor Version: **Yes**
 
-1. Navigate to the **az1000303vmss0 - Instances** blade, select the checkbox for **az1000303vmss0_0**, and then click on **Upgrade** to initiate the upgrade. Click **Yes**.
+1. Navigate to the **az1000304vmss0 - Instances** blade, select the checkbox for **az1000304vmss0_0**, and then click on **Upgrade** to initiate the upgrade. Click **Yes**.
 
-     > **Note**: The update will trigger application of the DSC configuration script. Wait for upgrade to complete. This should take about 5 minutes. You can monitor the progress from the **az1000303vmss0 - Instances** blade by clicking **Refresh** in the action bar and wait for the Status to change back to **Running**.
+     > **Note**: The update will trigger application of the DSC configuration script. Wait for upgrade to complete. This should take about 5 minutes. You can monitor the progress from the **az1000304vmss0 - Instances** blade by clicking **Refresh** in the action bar and wait for the Status to change back to **Running**.
 
 1. Once the upgrade completes, navigate to the **Overview** blade.
 
-1. On the **az1000303vmss0-ip** blade, note the public IP address assigned to **az1000303vmss0**.
+1. On the **az1000304vmss0-ip** blade, note the public IP address assigned to **az1000304vmss0**.
 
 1. Start Microsoft Edge and navigate to the public IP address you identified in the previous step.
 
