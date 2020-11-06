@@ -1,3 +1,5 @@
+# Prepare your Azure subscription for lab environment
+
 > **Please note: These labs require that you have an account with Azure and an Internet connection. If you do not have an existing subscription, sign up for a free trial by clicking [this link](https://azure.microsoft.com/en-us/free) and following the posted instructions.**
 
 **The lab instructions listed within [this link](https://github.com/CoIT-WGU/D084-Lab-Resources/tree/master/Instructions/Labs) should be opened with a browser, and indicates when you will need to reference each file to successfully complete each exercise.**
