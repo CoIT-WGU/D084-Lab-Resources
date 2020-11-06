@@ -68,4 +68,4 @@ This repository will include the following labs:
 1. Select **LabFiles**, then click **Upload** you documented from step 1.
 
 
-> **Now you should be able to see all of your necessary lab files stored within your Azure File Share to reference as you progress through the labs**.
+#### **Now you should be able to see all of your necessary lab files stored within your Azure File Share to reference as you progress through the labs**.
