@@ -486,8 +486,6 @@ The main tasks for this exercise are as follows:
 
     - Image: **Windows Server 2016 Datacenter - Gen1**
 
-    - Azure Spot instance: **No**
-
     - Size: **Standard_DS1_v2**
 
     - Username: **Student**
@@ -516,7 +514,7 @@ The main tasks for this exercise are as follows:
 
         - Subnet address range: **10.203.0.0/24**
 
-    - Click the **edit icon** to the right of the Network interface **az1000303-vnet0-nic01**, use the following settings and then click **OK**:
+    - Click the **edit icon** to the right of the Network interface **az1000304-vnet0-nic01**, use the following settings and then click **OK**:
 
        - Name: **az1000304-vnet0-nic01**
 
@@ -556,7 +554,7 @@ The main tasks for this exercise are as follows:
 
 1. Click **Next : Management &gt;** and use the following settings:
 
-    - Upgrade mode: **Manual**
+    - Upgrade mode: **Manual - Existing instances must be manually upgraded**
 
     - Boot diagnostics: **Off**
 
@@ -570,12 +568,18 @@ The main tasks for this exercise are as follows:
 
 1. Click **Next : Advanced &gt;** and view the available options.
 
-1. Click **Review + Create** and then click **Create**.
+1. Click **Review + Create** and then click **Create** when the validation passes.
 
 > **Note**: Wait for the deployment to complete before you proceed to the next task. This should take about 5 minutes.
 
 
 #### Task 3: Install IIS on a scale set VM by using DSC extensions
+
+1. From the Azure portal, click the **Create a resource** blade.
+
+1. Click the **+ Container** blade to add a container and name it *dsc*.
+
+1. Click **Upload**. Browse to the *Allfiles* from your File Explorer and choose **install_iis_vmss.zip**.
 
 1. In the Azure portal, navigate to the **az1000304vmss0** Virtual machine scale set blade.
 
