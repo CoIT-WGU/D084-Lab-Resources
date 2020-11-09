@@ -17,6 +17,6 @@ PowerShell:
 Register-AzResourceProvider
 ```
 or Azure CLI:
-```PowerShell
+```sh
 az provider
 ```
