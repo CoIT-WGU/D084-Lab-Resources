@@ -542,7 +542,7 @@ The main tasks for this exercise are as follows:
 
        - Public IP address name: **az1000304vmss0-ip**
 
-       - Domain name label: type in the value of the ***&lt;custom-label&gt;*** you identified in the previous task
+       - Domain name label: type in the value of the ***&lt;custom-label&gt;*** you identified in Exercise 3: Task 1.
 
 1. Click **Next : Scaling &gt;** and on the **Scaling** tab, use the following settings: 
 
@@ -575,11 +575,15 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Install IIS on a scale set VM by using DSC extensions
 
-1. From the Azure portal, click the **Create a resource** blade.
+1. From the Azure portal's hamburger menu on the upper-left side of the screen, click the **Storage accounts** blade.
+
+1. Click the storage account name that you created in [00 - Lab Setup](https://github.com/CoIT-WGU/D084-Lab-Resources/blob/master/Instructions/Labs/00%20-%20Lab%20Setup.md).
+
+1. Click the **Containers** blade.
 
 1. Click the **+ Container** blade to add a container and name it *dsc*.
 
-1. Click **Upload**. Browse to the *Allfiles* from your File Explorer and choose **install_iis_vmss.zip**.
+1. Click **Upload**. Browse to the *Allfiles* from your file explorer and choose **install_iis_vmss.zip**.
 
 1. In the Azure portal, navigate to the **az1000304vmss0** Virtual machine scale set blade.
 
@@ -603,7 +607,7 @@ The main tasks for this exercise are as follows:
 
     - Auto Upgrade Minor Version: **Yes**
 
-1. Navigate to the **az1000304vmss0 - Instances** blade, select the checkbox for **az1000304vmss0_0**, and then click on **Upgrade** to initiate the upgrade. Click **Yes**.
+1. Navigate to the **az1000304vmss0 - Instances** blade, select the checkbox for **az1000304vmss0_1**, and then click on **Upgrade** to initiate the upgrade. Click **Yes**.
 
      > **Note**: The update will trigger application of the DSC configuration script. Wait for upgrade to complete. This should take about 5 minutes. You can monitor the progress from the **az1000304vmss0 - Instances** blade by clicking **Refresh** in the action bar and wait for the Status to change back to **Running**.
 
