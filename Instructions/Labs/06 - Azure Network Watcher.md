@@ -53,7 +53,7 @@ The main tasks for this exercise are as follows:
 
 1. From the lab virtual machine, start Microsoft Edge, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign in by using a Microsoft account that has the Owner role in the target Azure subscription.
 
-1. In the Azure portal, navigate to the **New** blade.
+1. In the Azure portal, navigate to the **Create a resource** blade.
 
 1. From the **New** blade, search Azure Marketplace for **Template deployment**.
 
@@ -113,7 +113,7 @@ The main tasks for this exercise are as follows:
 
      > **Note**: Do not wait for the deployment to complete but proceed to the next step.
 
-1. In the Azure portal, navigate to the **New** blade.
+1. In the Azure portal, navigate to the **Create a resource** blade.
 
 1. From the **New** blade, search Azure Marketplace for **Template deployment**.
 
@@ -139,7 +139,7 @@ The main tasks for this exercise are as follows:
 
     - Resource group: the name of a new resource group **az1010302b-RG**
 
-    - Location: the name of an Azure region where you can provision Azure VMs, but which is **different** from the one you selected during previous deployment,
+    - Region: the name of an Azure region where you can provision Azure VMs, but which is **different** from the one you selected during previous deployment,
 
     - Vm Size: **Standard_DS2_v2**
 
@@ -159,7 +159,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Enable Azure Network Watcher service
 
-1. In the Azure portal, use the search text box on the **All services** blade to navigate to the **Network Watcher** blade.
+1. In the Azure portal, use the search text box to navigate to the **Network Watcher** blade.
 
 2. On the **Network Watcher** blade, verify that Network Watcher is enabled in both Azure regions into which you deployed resources in the previous task and, if not, enable it.
 
@@ -172,9 +172,19 @@ The main tasks for this exercise are as follows:
 
 1. From the **az1010301b-vnet1** virtual network blade, display the **az1010301b-vnet1 - Peerings** blade.
 
-1. From the **az1010301b-vnet1 - Peerings** blade, create a VNet peering with the following settings:
+1. From the **az1010301b-vnet1 - Peerings** blade, create a VNet peering with the following settings, leaving configurations not described as defaults:
 
-    - Name: **az1010301b-vnet1-to-az1010302b-vnet2**
+This virtual network:
+
+    - Peering link name: **az1010301b-vnet1-to-az1010302b-vnet2**
+    
+    - Traffic to remote virtual network: **Allow**
+    
+    - Traffic forwarded from remote virtual network: **Block traffic that originates from outside this virtual network**
+    
+Remote virtual network:
+
+    - Peer linking name: **az1010302b-vnet2-to-az1010301b-vnet1**
 
     - Virtual network deployment model: **Resource manager**
 
@@ -182,17 +192,11 @@ The main tasks for this exercise are as follows:
 
     - Virtual network: **az1010302b-vnet2**
 
-    - Name of peering from az1010302b-vnet2 to az1010301b-vnet1: **az1010302b-vnet2-to-az1010301b-vnet1**
+    - Traffic to remote virtual network: **Allow**
+    
+    - Traffic forwarded from remote virtual network: **Block traffic that originates from outside this virtual network**
 
-    - Allow virtual network access from az1010301b-vnet1 to az1010302b-vnet2: **Enabled**
-
-    - Allow virtual network access from az1010302b-vnet2 to az1010301b-vnet1: **Enabled**
-
-    - Allow forwarded traffic from az1010302b-vnet2 to az1010301b-vnet1: **Disabled**
-
-    - Allow forwarded traffic from az1010301b-vnet1 to az1010302b-vnet2: **Disabled**
-
-    - Allow gateway transit: **Disabled**
+    - Virtual network gateway: **None**
 
  > **Note**: The Azure portal allows you to configure both directions of the peering simultaneously. When using other management tools, each direction must be configured independently.
 
@@ -245,7 +249,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Azure portal, navigate to the **az1010301b-RG** resource group blade.
 
-1. From the **az1010301b-RG** resource group blade, navigate to the **az1010301b** Azure SQL Server blade.
+1. From the **az1010301b-RG** resource group blade, navigate to the **az1010301b** SQL Server blade.
 
 1. From the Azure SQL Server blade, navigate to its server's **Firewalls and virtual networks** blade.
 
@@ -259,7 +263,7 @@ The main tasks for this exercise are as follows:
 
     - No firewall rules configured
 
-    - Virtual networks:
+    - Add existing virtual network:
 
         - Name: **az1010301b-vnet1**
 
