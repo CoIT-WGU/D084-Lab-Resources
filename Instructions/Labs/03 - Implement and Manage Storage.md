@@ -55,7 +55,7 @@ The main tasks for this exercise are as follows:
 
       >**Note:** This step registers the Azure Resource Manager Microsoft.Network, Microsoft.Compute, and Microsoft.Storage resource providers. This is a one-time operation (per subscription) required when using Azure Resource Manager templates to deploy resources managed by these resource providers (if these resource providers have not been yet registered).
 
-1. In the Azure portal, navigate to the **New** blade.
+1. From the Azure portal, navigate to the **Create a resource** blade.
 
 1. From the **New** blade, search Azure Marketplace for **Template deployment**, and select **Template deployment (deploy using custom templates)**
 
@@ -83,7 +83,7 @@ The main tasks for this exercise are as follows:
 
     - Location: the name of the Azure region which is closest to the lab location and where you can provision Azure VMs
 
-    - Vm Size: use **Standard_DS1_v2** or **Standard_DS2_v2**, based on the instructor's recommendations
+    - Vm Size: use **Standard_DS1_v2**
 
     - Vm Name: **az1000201-vm1**
 
@@ -119,11 +119,11 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Create Azure Storage accounts
 
-1. In the Azure portal, navigate to the **New** blade.
+1. In the Azure portal, navigate to the **Create a new resource** blade.
 
-1. From the **New** blade, search Azure Marketplace for **Storage account - blob, file, table, queue**.
+1. From the **New** blade, search Azure Marketplace for **Storage account**.
 
-1. Use the list of search results to navigate to the **Create storage account - blob, file, table, queue** blade.
+1. Use the list of search results to navigate to the **Storage account** blade and click **Create**.
 
 1. From the **Create storage account** blade, create a new storage account with the following settings:
 
@@ -145,11 +145,11 @@ The main tasks for this exercise are as follows:
 
 1. Do not wait for the storage account to be provisioned but proceed to the next step.
 
-1. In the Azure portal, navigate to the **New** blade.
+1. In the Azure portal, navigate to the **Create a resource** blade.
 
-1. From the **New** blade, search Azure Marketplace for **Storage account - blob, file, table, queue**.
+1. From the **New** blade, search Azure Marketplace for **Storage account**.
 
-1. Use the list of search results to navigate to the **Create storage account - blob, file, table, queue** blade.
+1. Use the list of search results to navigate to the **Storage account** blade and click **Create**.
 
 1. From the **Create storage account** blade, create a new storage account with the following settings:
 
@@ -166,8 +166,6 @@ The main tasks for this exercise are as follows:
     - Account kind: **StorageV2 (general purpose v2)**
 
     - Replication: **Geo-redundant storage (GRS)**
-    
-    - Access tier (default): **Hot**
 
 1. Click **Review + create**, then click **Create**.
 
@@ -196,7 +194,7 @@ The main tasks for this exercise are as follows:
 
 1. Display the **Configuration** blade of the storage account.
 
-1. On the **Configuration** blade, note that you have the option of disabling the secure transfer requirement, setting the default access tier to **Cool**, and changing the replication settings to either **Locally-redundant storage (LRS)** or **Read-access geo-redundant storage (RA-GRS)**. In this case, you also cannot change the performance setting.
+1. On the **Configuration** blade, note that you have the option of disabling the secure transfer requirement, setting the default access tier to **Cool**, and changing the replication settings to either **Locally-redundant storage (LRS)** or **Read-access geo-redundant storage (RA-GRS)**. In this case, you also cannot change the performance setting. Click **Save**.
 
 1. Display the **Encryption** blade of the storage account. Note that in this case encryption is also enabled by default and that you have the option of using your own key.
 
@@ -257,7 +255,7 @@ The main tasks for this exercise are as follows:
 
 1. Verify that the command returned the results confirming that the two files were transferred.
 
-1. Navigate to the **Blobs** blade of the second storage account and verify that it includes the entry representing the newly created **az1000202-container** and that the container includes two copied blobs.
+1. Navigate to the **Containers** blade of the second storage account and verify that it includes the entry representing the newly created **az1000202-container** and that the container includes two copied blobs.
 
 
 #### Task 5: Use a Shared Access Signature (SAS) key to access a blob
@@ -270,7 +268,9 @@ The main tasks for this exercise are as follows:
 
       > **Note**: The browser will display the **ResourceNotFound**. This is expected since the container has the **Public access level** set to **Private (no anonymous access)**.
 
-1. On the **azuredeploy.json** blade, generate a shared access signature (SAS) and the corresponding URL with the following settings:
+1. On the **azuredeploy.json** blade, generate a shared access signature (SAS) and the corresponding URL by clicking **Generate SAS** and configuring the following settings:
+
+    - Signing key: **Key 1**
 
     - Permissions: **Read**
 
@@ -281,8 +281,6 @@ The main tasks for this exercise are as follows:
     - Allowed IP addresses: leave blank
 
     - Allowed protocols: **HTTP**
-
-    - Signing key: **Key 1**
 
 1. On the **azuredeploy.json** blade, copy **Blob SAS URL**.
 
@@ -345,7 +343,7 @@ The main tasks for this exercise are as follows:
 
 1. In the File Explorer window, create a folder named **Folder1** on the Z: drive.
 
-1. In the File Explorer window, navigate to **Folder1** and create a text document named **File1.txt**.
+1. In the File Explorer window, navigate to **Folder1** and create a text document named **File1.txt** within the folder.
 
       > **Note**: Make sure that you take into account the default configuration of File Explorer that does not display known file extensions in order to avoid creating a file named **File1.txt.txt**.
 
