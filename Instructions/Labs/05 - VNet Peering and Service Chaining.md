@@ -93,7 +93,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Create the second virtual network in the same region hosting a single Azure VM by using an Azure Resource Manager template
 
-1. In the Azure portal, navigate to the **New** blade.
+1. In the Azure portal, navigate to the **Create a resource** blade.
 
 1. From the **New** blade, search Azure Marketplace for **Template deployment**.
 
@@ -153,9 +153,15 @@ The main tasks for this exercise are as follows:
 
 1. From the **az1000401-vnet1** virtual network blade, display its **Peerings** blade.
 
-1. From the **az1000401-vnet1 - Peerings** blade, click **+ Add** to create a VNet peering with the following settings:
+1. From the **az1000401-vnet1 - Peerings** blade, click **+ Add** to create a VNet peering with the following settings, keeping others not mentioned configured to the defaults:
 
-    - Name: **az1000401-vnet1-to-az1000402-vnet2**
+This virtual network:
+
+    - Peering link name: **az1000401-vnet1-to-az1000402-vnet2**
+
+Remote virtual network:
+
+    - Peering link name: **az1000402-vnet2-to-az1000401-vnet1**
 
     - Virtual network deployment model: **Resource manager**
 
@@ -164,18 +170,6 @@ The main tasks for this exercise are as follows:
     - Subscription: the name of the Azure subscription you are using in this lab
 
     - Virtual network: **az1000402-vnet2**
-
-    - Name of peering from az1000402-vnet2 to az1000401-vnet1: **az1000402-vnet2-to-az1000401-vnet1**
-
-    - Allow virtual network access from az1000401-vnet1 to az1000402-vnet2: **Enabled**
-
-    - Allow virtual network access from az1000402-vnet2 to az1000401-vnet1: **Enabled**
-
-    - Allow forwarded traffic from az1000402-vnet2 to az1000401-vnet1: **Disabled**
-
-    - Allow forwarded traffic from az1000401-vnet1 to az1000402-vnet2: **Disabled**
-
-    - Allow gateway transit: unchecked
 
     > **Note**: Because you have administrative access to both virtual networks, the portal is configuring both directions (from vnet1 to vnet2, AND vnet2 to vnet1) in a single action. From the CLI, PowerShell, or REST API, these tasks must be performed independently.
 
@@ -211,7 +205,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Configure user defined routing
 
-1. In the Azure portal, navigate to the **New** blade.
+1. In the Azure portal, navigate to the **Create a new resource** blade.
 
 1. From the **New** blade, search Azure Marketplace for **Route table**.
 
@@ -219,13 +213,13 @@ The main tasks for this exercise are as follows:
 
 1. From the **Create route table** blade, create a new route table with the following settings:
 
-    - Name: **az1000402-rt1**
-
     - Subscription: the name of the Azure subscription you use for this lab
 
     - Resource group: **az1000402-RG**
 
-    - Location: the same Azure region in which you created the virtual networks
+    - Name: **az1000402-rt1**
+
+    - Region: the same Azure region in which you created the virtual networks
 
     - Propogate gateway routes: **No**
 
@@ -251,7 +245,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **az1000402-rt1** blade, display its **Subnets** blade.
 
-1. From the **az1000402-rt1 - Subnets** blade, associate the route table **az1000402-rt1** with **subnet0** of **az1000402-vnet2**.
+1. From the **az1000402-rt1 - Subnets** blade, associate the route table with **subnet0** of **az1000402-vnet2**.
 
 
 #### Task 3: Configure routing in an Azure VM running Windows Server 2016
