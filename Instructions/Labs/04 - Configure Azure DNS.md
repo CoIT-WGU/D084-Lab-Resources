@@ -48,7 +48,7 @@ The main tasks for this exercise are as follows:
 
 1. From the lab virtual machine, start Microsoft Edge, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign in by using a Microsoft account that has the Owner role in the Azure subscription you intend to use in this lab.
 
-1. In the Azure portal, navigate to the **New** blade.
+1. In the Azure portal, navigate to the **Create a new resource** blade.
 
 1. From the **New** blade, search Azure Marketplace for **DNS zone**.
 
@@ -62,7 +62,7 @@ The main tasks for this exercise are as follows:
 
     - Name: any unique, valid DNS domain name in the **.com** namespace
 
-    - Resource group location: **(US) East US** (or a supported region near you)
+    - Resource group location: **East US** (or a supported region near you)
 
 
 #### Task 2: Create a DNS record in the public DNS zone
@@ -83,7 +83,6 @@ The main tasks for this exercise are as follows:
 
    ```powershell
    $rg = Get-AzResourceGroup -Name az1000401b-RG
-
    New-AzPublicIpAddress -ResourceGroupName $rg.ResourceGroupName -Sku Basic -AllocationMethod Static -Name az1000401b-pip -Location $rg.Location
    ```
 
@@ -130,11 +129,10 @@ The main tasks for this exercise are as follows:
 
 1. On the DNS zone blade, note the list of the name servers that host the zone you created. You will use the first of them named in the next step.
 
-1. From the lab virtual machine, start Command Prompt and run the following to validate the name resolution of the two newly created DNS records (where ***&lt;custom_DNS_domain&gt;*** represents the custom DNS domain you created in the first task of this exercise and ***&lt;name_server&gt;*** represents the name of the DNS name server you identified in the previous step):
+1. From your physical host, start Command Prompt and run the following to validate the name resolution of the two newly created DNS records (where ***&lt;custom_DNS_domain&gt;*** represents the custom DNS domain you created in the first task of this exercise and ***&lt;name_server&gt;*** represents the name of the DNS name server you identified in the previous step):
 
    ```
    nslookup mylabvmpip.<custom_DNS_domain> <name_server>
-
    nslookup myazurepip.<custom_DNS_domain> <name_server>
    ```
 
@@ -165,7 +163,6 @@ The main tasks for this exercise are as follows:
 
    ```powershell
    $rg1 = Get-AzResourceGroup -Name 'az1000401b-RG'
-
    $rg2 = New-AzResourceGroup -Name 'az1000402b-RG' -Location $rg1.Location
    ```
 
@@ -173,11 +170,8 @@ The main tasks for this exercise are as follows:
 
    ```powershell
    $subnet1 = New-AzVirtualNetworkSubnetConfig -Name subnet1 -AddressPrefix '10.104.0.0/24'
-
    $vnet1 = New-AzVirtualNetwork -ResourceGroupName $rg2.ResourceGroupName -Location $rg2.Location -Name az1000402b-vnet1 -AddressPrefix 10.104.0.0/16 -Subnet $subnet1
-
    $subnet2 = New-AzVirtualNetworkSubnetConfig -Name subnet1 -AddressPrefix '10.204.0.0/24'
-
    $vnet2 = New-AzVirtualNetwork -ResourceGroupName $rg2.ResourceGroupName -Location $rg2.Location -Name az1000402b-vnet2 -AddressPrefix 10.204.0.0/16 -Subnet $subnet2
    ```
 
@@ -189,13 +183,9 @@ The main tasks for this exercise are as follows:
    ```powershell
 
    $vnet1 = Get-AzVirtualNetwork -Name az1000402b-vnet1
-
    $vnet2 = Get-AzVirtualNetwork -name az1000402b-vnet2
-
    $zone = New-AzPrivateDnsZone -Name adatum.corp -ResourceGroupName $rg2.ResourceGroupName
-
    $vnet1link = New-AzPrivateDnsVirtualNetworkLink -ZoneName $zone.Name -ResourceGroupName $rg2.ResourceGroupName -Name "vnet1Link" -VirtualNetworkId $vnet1.id -EnableRegistration
-
    $vnet2link = New-AzPrivateDnsVirtualNetworkLink -ZoneName $zone.Name -ResourceGroupName $rg2.ResourceGroupName -Name "vnet2Link" -VirtualNetworkId $vnet2.id
    ```
 
@@ -208,20 +198,19 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Deploy Azure VMs into virtual networks
 
-1. In the Cloud Shell pane, upload the **b_01_azuredeploy.json**, **b_02_azuredeploy.json**, and **azuredeploy.parameters.json** files from the **Labfiles\\Module_04\\Configure_Azure_DNS** folder.
+1. In the Cloud Shell pane, upload the **01_azuredeploy.json**, **02_azuredeploy.json**, and **azuredeploy.parameters.json** files from the **Labfiles\\Module_04\\Configure_Azure_DNS** folder.
 
 1. In the Cloud Shell pane, run the following in order to deploy an Azure VM into the first virtual network:
 
    ```powershell
    cd $home
-
-   New-AzResourceGroupDeployment -ResourceGroupName $rg2.ResourceGroupName -TemplateFile "./b_01_azuredeploy.json" -TemplateParameterFile "./azuredeploy.parameters.json" -AsJob
+   New-AzResourceGroupDeployment -ResourceGroupName $rg2.ResourceGroupName -TemplateFile "./01_azuredeploy.json" -TemplateParameterFile "./azuredeploy.parameters.json" -AsJob
    ```
 
 1. In the Cloud Shell pane, run the following in order to deploy an Azure VM into the second virtual network:
 
    ```powershell
-   New-AzResourceGroupDeployment -ResourceGroupName $rg2.ResourceGroupName -TemplateFile "./b_02_azuredeploy.json" -TemplateParameterFile "./azuredeploy.parameters.json" -AsJob
+   New-AzResourceGroupDeployment -ResourceGroupName $rg2.ResourceGroupName -TemplateFile "./02_azuredeploy.json" -TemplateParameterFile "./azuredeploy.parameters.json" -AsJob
    ```
 
 > **Note**: Wait for both deployments to complete before you proceed to the next task. You can identify the state of the jobs by running the `Get-Job` cmdlet in the Cloud Shell pane.
@@ -229,9 +218,9 @@ The main tasks for this exercise are as follows:
 
 #### Task 4: Validate Azure DNS-based name reservation and resolution for the private domain
 
-1. In the Azure portal, navigate to the blade of the **az1000402b-vm2** Azure VM.
+1. In the Azure portal, navigate to the blade of the **az1000402b-vm1** Azure VM.
 
-1. From the **Overview** pane of the **az1000402b-vm2** blade, generate an RDP file and use it to connect to **az1000402b-vm2**.
+1. From the **Overview** pane of the **az1000402b-vm1** blade, generate an RDP file and use it to connect to **az1000402b-vm1**.
 
 1. When prompted, authenticate by specifying the following credentials:
 
