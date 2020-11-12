@@ -39,9 +39,9 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Deploy an Azure VM to be migrated by using an Azure Resource Manager template
 
-1. From the lab virtual machine, start Microsoft Edge, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign in by using a Microsoft account that has the Owner role in the Azure subscription you intend to use in this lab.
+1. From your personal computer, start Microsoft Edge, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign in by using a Microsoft account that has the Owner role in the Azure subscription you intend to use in this lab.
 
-1. In the Azure portal, navigate to the **New** blade.
+1. In the Azure portal, navigate to the **Create a resource** blade.
 
 1. From the **New** blade, search Azure Marketplace for **Template deployment**.
 
@@ -90,13 +90,11 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Implement an Azure Site Recovery vault
 
-1. In the Azure portal, navigate to the **New** blade.
+1. In the Azure portal, navigate to the **Create a resource** blade.
 
-1. From the **New** blade, search Azure Marketplace for **Backup and Site Recovery**.
+1. From the **New** blade, search Azure Marketplace for **Backup and Site Recovery**, then click **Create**.
 
-1. Use the list of search results to navigate to the **Recovery Services vault** blade.
-
-1. Use the **Recovery Services vault** blade, to create a Site Recovery vault with the following settings:
+1. From the **Create Recovery Services vault** blade, create a Site Recovery vault with the following settings:
 
     - Subscription: the same Azure subscription you used in the previous task of this exercise
 
@@ -133,9 +131,9 @@ The main tasks for this exercise are as follows:
 
 1. In the Azure portal, navigate to the **Overview** blade of the newly provisioned Azure Recovery Services vault **vaultaz1010102**.
 
-1. From the **vaultaz1010102** blade, click **+ Replicate** and configure the following replication settings:
+1. From the **vaultaz1010102** blade, click **+ Enable Site Recovery**.
 
-    - Source: **Azure**
+1. Under **Azure virtual machines** click the **1: Enable replication** link and configure the following replication settings:
 
     - Source location: the same Azure region into which you deployed the Azure VM in the previous exercise of this lab
 
@@ -171,6 +169,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **Enable replication** blade, enable the replication.
 
+> **Note:** The replication goes through multiple phases and may take approximately 20 minutes for the configuration to be completed.  For the next task, you will be reviewing the status indicators of replication, and expect the replication to be incomplete if you progress immediately to task 2 below.
 
 #### Task 2: Review Azure VM replication settings
 
@@ -183,8 +182,6 @@ The main tasks for this exercise are as follows:
 1. From the **vaultaz1010102 - Replicated items** blade, display the replicated item blade of the **az1010101-vm** Azure VM.
 
 1. On the **az1010101-vm** replicated item blade, review the **Health and status**, **Failover readiness**, **Latest recovery points**, and **Infrastructure view** sections. Note the **Failover** and **Test Failover** toolbar icons.
-
-    > **Note**: The remaining steps of this task are optional and not graded.
 
 1. If time permits, wait until the replication status changes to **100% synchronized**. This might take additional 90 minutes.
 
