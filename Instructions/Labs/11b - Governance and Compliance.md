@@ -49,7 +49,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Provision Azure resources by using an Azure Resource Manager template.
 
-1. From the lab virtual machine, start Microsoft Edge, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign in by using a Microsoft account that has the Owner role in the Azure subscription you intend to use in this lab.
+1. From your personal computer, start Microsoft Edge, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign in by using a Microsoft account that has the Owner role in the Azure subscription you intend to use in this lab.
 
 1. In the Azure portal, navigate to the **New** blade.
 
@@ -77,7 +77,7 @@ The main tasks for this exercise are as follows:
 
     - Resource group: the name of a new resource group **az1000101b-RG**
 
-    - Location: the name of the Azure region which is closest to the lab location and where you can provision Azure VMs
+    - Region: the name of the Azure region which is closest to the lab location and where you can provision Azure VMs
 
     - Vm Size: **Standard_DS1_v2**
 
