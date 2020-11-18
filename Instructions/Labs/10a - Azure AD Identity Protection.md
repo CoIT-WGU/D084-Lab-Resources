@@ -40,13 +40,11 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Deploy an Azure VM by using an Azure Resource Manager template
 
-1. From the lab virtual machine, start Microsoft Edge, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign in by using a Microsoft account that has the Owner role in the Azure subscription you intend to use in this lab.
+1. From your personal computer, start Microsoft Edge, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign in by using a Microsoft account that has the Owner role in the Azure subscription you intend to use in this lab.
 
-1. In the Azure portal, navigate to the **New** blade.
+1. In the Azure portal, navigate to the **Create a resource** blade.
 
-1. From the **New** blade, search Azure Marketplace for **Template deployment**.
-
-1. Use the list of search results to navigate to the **Custom deployment** blade.
+1. From the **New** blade, search Azure Marketplace for **Template deployment**, then click **Create**.
 
 1. On the **Custom deployment** blade, select the **Build your own template in the editor**.
 
@@ -108,11 +106,9 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Create a new Azure AD tenant
 
-1. In the Azure portal, navigate to the **New** blade.
+1. In the Azure portal, navigate to the **Create a resource** blade.
 
-1. From the **New** blade, search Azure Marketplace for **Azure Active Directory**.
-
-1. Use the list of search results to navigate to the **Create directory** blade.
+1. From the **New** blade, search Azure Marketplace for **Azure Active Directory** and click **Create**.
 
 1. From the **Create directory** blade, create a new Azure AD tenant with the following settings:
 
@@ -135,7 +131,7 @@ The main tasks for this exercise are as follows:
 
 1. In the Azure portal, navigate to the **AdatumLab101-4b - Overview** blade.
 
-1. From the **AdatumLab101-4b - Overview** blade, navigate to the **Licenses - Overview** blade.
+1. From the **AdatumLab101-4b - Overview** blade, navigate to the **Licenses** blade.
 
 1. From the **Licenses - Overview** blade, navigate to the **Licenses - All products** blade.
 
@@ -144,7 +140,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 3: Create Azure AD users and groups.
 
-1. In the Azure portal, navigate to the **Users - All users** blade of the AdatumLab101-4b Azure AD tenant.
+1. In the Azure portal, navigate to the **Users** blade of the AdatumLab101-4b Azure AD tenant.
 
 1. From the **Users - All users** blade, create a new user with the following settings:
 
@@ -206,7 +202,7 @@ The main tasks for this exercise are as follows:
 
 1. On the **multi-factor authentication** portal, switch to the **users** tab, select **aaduser1** entry, and enable its multi-factor authentication status.
 
-1. On the **multi-factor authentication** portal, note that the multi-factor authentication status of **aaduser1** changed to **Enabled** and that, once you select the user entry again, you have the option of changing it to **Enforced**.
+1. On the **multi-factor authentication** portal, note that the multi-factor authentication status of **aaduser1** changed to **Enabled** and that, once you select the user entry again, you have the option of changing it to **Enforced**.  Enforce MFA.
 
      > **Note**: Changing the user status from enabled to enforced impacts only legacy, Azure AD integrated apps which do not support Azure MFA and, once the status changes to enforced, require the use of app passwords.
 
@@ -220,7 +216,7 @@ The main tasks for this exercise are as follows:
 
 1. Click **Cancel** and switch back to the Azure portal, without making any changes.
 
-1. From the **Users - All users** blade of the AdatumLab101-4b Azure AD tenant, navigate to the **AdatumLab101-4b - Overview** blade.
+1. From the **Users - All users** blade of the AdatumLab101-4b Azure AD tenant, navigate to the **AdatumLab101-4b** blade.
 
 1. From the **AdatumLab101-4b - Overview** blade, navigate to the Security blade, then MFA blade.
 
@@ -281,7 +277,7 @@ The main tasks for this exercise are as follows:
 
      > **Note**: Ensure that you are signed-in to the **AdatumLab101-4b** Azure AD tenant. You can use the **Directory + subscription** filter to switch between Azure AD tenants.
 
-1. In the Azure portal, navigate to the **New** blade.
+1. In the Azure portal, navigate to the **Create a resource** blade.
 
 1. From the **New** blade, search Azure Marketplace for **Azure AD Identity Protection**.
 
@@ -308,14 +304,14 @@ The main tasks for this exercise are as follows:
 
         - Access: **Allow access**
 
-        - **Require password change**
+        - **Require multi-factor authentication**
 
     - Enforce Policy: **On**
 
 
 #### Task 3: Configure sign-in risk policy
 
-1. From the **Azure AD Identity Protection - User risk policy** blade, navigate to the **Azure AD Identity Protection - Sign-in risk policy** blade
+1. From the **Azure AD Identity Protection - User risk policy** blade, navigate to the **Azure AD Identity Protection - Sign-in risk policy** blade.
 
 1. On the **Azure AD Identity Protection - Sign-in risk policy** blade, configure the **Sign-in risk remediation policy** with the following settings:
 
