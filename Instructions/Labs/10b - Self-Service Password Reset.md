@@ -48,13 +48,11 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Create a new Azure AD tenant
 
-1. From the lab virtual machine, start Microsoft Edge, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign in by using a Microsoft account that has the Owner role in the Azure subscription you intend to use in this lab.
+1. From your personal computer, start Microsoft Edge, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign in by using a Microsoft account that has the Owner role in the Azure subscription you intend to use in this lab.
 
-1. In the Azure portal, navigate to the **New** blade.
+1. In the Azure portal, navigate to the **Create a resource** blade.
 
-1. From the **New** blade, search Azure Marketplace for **Azure Active Directory**.
-
-1. Use the list of search results to navigate to the **Create directory** blade.
+1. From the **New** blade, search Azure Marketplace for **Azure Active Directory**, then click **Create**.
 
 1. From the **Create directory** blade, create a new Azure AD tenant with the following settings:
 
@@ -75,13 +73,13 @@ The main tasks for this exercise are as follows:
 
      > **Note**: You might need to refresh the browser window if the **AdatumLab100-5b** entry does not appear in the **Directory + subscription** filter list.
 
-1. In the Azure portal, navigate to the **AdatumLab100-5b - Overview** blade.
+1. In the Azure portal, navigate to the **Azure Active Directory** blade, then click on the **AdatumLab100-5b - Overview** blade.
 
-1. From the **AdatumLab100-5b - Overview** blade, navigate to the **Licenses - Overview** blade.
+1. From the **AdatumLab100-5b - Overview** blade, navigate to the **Licenses** blade.
 
-1. From the **Licenses - Overview** blade, navigate to the **Products** blade.
+1. From the **Licenses - Overview** blade, navigate to the **All products** blade.
 
-1. From the **Licenses - All products** blade, click **Try/Buy**. Under **Azure AD Premium P2** expand **Free trial**, and then click **Activate**.
+1. From the **Licenses - All products** blade, click **+ Try/Buy**. Under **Azure AD Premium P2** expand **Free trial**, and then click **Activate**.
 
 
 #### Task 3: Create and configure Azure AD users
@@ -321,7 +319,7 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Add an application from the Azure AD gallery
 
-1. In the Azure portal, navigate to the **AdatumLab100-5b - Overview** blade.
+1. In the Azure portal, navigate to the **Azure Active Directory** blade.
 
 1. From the **AdatumLab100-5b - Overview** blade, navigate to the **Enterprise applications - All applications** blade.
 
