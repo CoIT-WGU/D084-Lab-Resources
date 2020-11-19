@@ -51,7 +51,7 @@ The main tasks for this exercise are as follows:
 
 1. From your personal computer, start Microsoft Edge, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign in by using a Microsoft account that has the Owner role in the Azure subscription you intend to use in this lab.
 
-1. In the Azure portal, navigate to the **New** blade.
+1. In the Azure portal, navigate to the **Create a resource** blade.
 
 1. From the **New** blade, search Azure Marketplace for **Template deployment**.
 
@@ -108,7 +108,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **Policy** blade, navigate to the **Policy - Definitions** blade.
 
-1. From the **Policy Definitions** blade, display the **Require tag and its value** policy definition.
+1. From the **Policy Definition** blade, use the **Search** field to find the **Require tag and its value on resources** policy definition. Click the policy definition.
 
 1. From the **Require a tag and its value on resources** policy definition blade, use the **Duplicate definition** feature to create a new policy with the following settings:
 
@@ -124,7 +124,7 @@ The main tasks for this exercise are as follows:
 
    ```json
    {
-     "mode": "indexed",
+     "mode": "Indexed",
      "policyRule": {
        "if": {
          "not": {
@@ -155,23 +155,35 @@ The main tasks for this exercise are as follows:
    }
    ```
 
-1. From the **Policy - Definitions** blade, navigate to the **New Initiative definition** blade.
+1. Click **Save**.
 
-1. From the **New Initiative definition** blade, create a new initiative definition with the following settings:
+1. From the **Policy - Definitions** blade, navigate to the **+ Initiative definition** blade.
 
-    - Definition location: the name of the subscription you are using in this lab
+1. From the **Initiative definition** blade, create a new initiative definition with the following settings:
 
-    - Name: **az10001b - Tagging initiative**
+    - Basics
 
-    - Description: **Collection of tag policies.**
+        - Definition location: the name of the subscription you are using in this lab
 
-    - Category: Use existing category **Lab**
+        - Name: **az10001b - Tagging initiative**
 
-    - AVAILABLE DEFINITIONS: search for and Add **az10001b - Audit tag and its value**
+        - Description: **Collection of tag policies.**
 
+        - Category: Use existing category **Lab**
+        
+    - Policies
+
+        - Click **Add policy definitions**. Add **az10001b - Audit tag and its value**
+
+    - Policy parameters
+        
         - Tag Name: **Set value** - **environment**
 
         - Tag Value: **Set value** - **lab**
+
+1. Click **Review + create**.
+
+> **Note**: It will provide a warning about no initiative policies being included. Proceed anyways.
 
 1. Navigate to the **Policy - Assignments** blade.
 
@@ -190,8 +202,12 @@ The main tasks for this exercise are as follows:
     - Policy enforcement: **Enabled**
 
     - Assigned by: the default value
+    
+1. Click **Review + Create**, then click **Create**.
 
-1. Navigate to the **Policy - Compliance** blade. Note that **COMPLIANCE STATE** is set to either **Not registered** or **Not started**.
+> **Note**: You will see information about no parameter changes and no managed identity association. Proceed anyways.
+
+1. Navigate to the **Policy - Compliance** blade. Note that **COMPLIANCE STATE** for your new policy is set to either **Not registered** or **Not started**
 
     > **Note**: On average, it takes about 10 minutes for a compliance scan to start. Rather than waiting for the compliance scan, proceed to the next task. You will review the compliance status later in this exercise.
 
@@ -204,22 +220,22 @@ The main tasks for this exercise are as follows:
 
 1. From the **az10001b - Tagging initiative** blade, navigate to its **Edit initiative** blade.
 
-1. Add the built-in policy definition named **Require a tag and its value on resources** to the initiative and set its parameters to the following values:
+1. Add the built-in policy definition named **Require a tag and its value on resources** to the initiative and set its policy parameters to the following values:
 
     - Tag Name: **environment**
 
     - Tag Value: **lab**
 
    > **Note**: At this point, your initiative contains two policies. The first of them evaluates the compliance status and the second one enforces tagging during deployment.
+   
+1. Click **Review + save**, then click **Save**.
 
 
 #### Task 4: Evaluate tagging enforcement and tagging compliance.
 
-1. In the Azure portal, navigate to the **New** blade.
+1. In the Azure portal, navigate to the **Create a resource** blade.
 
-1. From the **New** blade, search Azure Marketplace for **Template deployment**.
-
-1. Use the list of search results to navigate to the **Custom deployment** blade.
+1. From the **New** blade, search Azure Marketplace for **Template deployment**, then click **Create**.
 
 1. On the **Custom deployment** blade, select the **Build your own template in the editor**.
 
@@ -241,7 +257,7 @@ The main tasks for this exercise are as follows:
 
     - Resource group: the name of a new resource group **az1000102b-RG**
 
-    - Location: the name of the Azure region which you chose in the first task of this exercise
+    - Region: the name of the Azure region which you chose in the first task of this exercise
 
     - Vm Size: **Standard_DS1_v2**
 
@@ -307,11 +323,9 @@ The main tasks for this exercise are as follows:
 
 #### Task 6: Evaluate effects of the remediation task on compliance.
 
-1. In the Azure portal, navigate to the **New** blade.
+1. In the Azure portal, navigate to the **Create a resource** blade.
 
-1. From the **New** blade, search Azure Marketplace for **Template deployment**.
-
-1. Use the list of search results to navigate to the **Custom deployment** blade.
+1. From the **New** blade, search Azure Marketplace for **Template deployment**, then click **Template deployment (deploy using custom template)**.
 
 1. On the **Custom deployment** blade, select the **Build your own template in the editor**.
 
@@ -438,7 +452,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **Policy**, blade navigate to the **Policy - Assignments** blade.
 
-1. From the **Policy - assignments** blade, remove the assignment you created earlier in this lab.
+1. From the **Policy - Assignments** blade, remove the assignment you created earlier in this lab.
 
 1. From the **Policy**, blade navigate to the **Policy - Definitions** blade.
 
