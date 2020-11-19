@@ -38,13 +38,11 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Deploy an Azure VM by using an Azure Resource Manager template
 
-1. From the lab virtual machine, start Microsoft Edge, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign in by using a Microsoft account that has the Owner role in the Azure subscription you intend to use in this lab.
+1. From your personal computer, start Microsoft Edge, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign in by using a Microsoft account that has the Owner role in the Azure subscription you intend to use in this lab.
 
-1. In the Azure portal, navigate to the **New** blade.
+1. In the Azure portal, navigate to the **Create a resource** blade.
 
-1. From the **New** blade, search Azure Marketplace for **Template deployment**.
-
-1. Use the list of search results to navigate to the **Custom deployment** blade.
+1. From the **New** blade, search Azure Marketplace for **Template deployment**, then click **Template deployment (deploy using custom templates)**.
 
 1. On the **Custom deployment** blade, select the **Build your own template in the editor**.
 
@@ -66,7 +64,7 @@ The main tasks for this exercise are as follows:
 
     - Resource group: the name of a new resource group **az1000201b-RG**
 
-    - Location: the name of the Azure region which is closest to the lab location and where you can provision Azure VMs
+    - Region: the name of the Azure region which is closest to the lab location and where you can provision Azure VMs
 
     - Vm Size: **Standard_DS2_v2**
 
@@ -101,14 +99,16 @@ The main tasks for this exercise are as follows:
 
 #### Task 1: Create an Azure Storage account and a file share
 
-1. In the Azure portal, navigate to the **New** blade.
+1. In the Azure portal, navigate to the **Create a resource** blade.
 
 1. From the **New** blade, search Azure Marketplace for **Storage account**.
 
 1. Use the list of search results to navigate to the **Create storage account** blade.
 
-1. From the **Create storage account** blade, create a new storage account with the following settings:
+1. From the **Create storage account** blade create a new storage account with the following settings, leaving everything unmentioned as the default:
 
+- Basics    
+    
     - Subscription: the same subscription you selected in the previous task
 
     - Resource group: the name of a new resource group **az1000202b-RG**
@@ -122,18 +122,24 @@ The main tasks for this exercise are as follows:
     - Account kind: **Storage (general purpose v1)**
 
     - Replication: **Locally-redundant storage (LRS)**
+    
+- Networking    
 
     - Connectivity method: **Public endpoint (all networks)**
 
-    - Secure transfer required: **Disabled**
-
-    - Large file shares: **Disabled**
+- Data protection
 
     - Blob soft delete: **Disabled**
 
-    - Hierarchical namespace: **Disabled**
+- Advanced
+    
+    - Secure transfer required: **Disabled**
 
     - NFS v3: **Disabled**
+    
+    - Hierarchical namespace: **Disabled**
+
+    - Large file shares: **Disabled**
 
      > **Note**: Wait for the storage account to be provisioned, then proceed to the next step.
 
@@ -160,7 +166,7 @@ The main tasks for this exercise are as follows:
 
     - Admin Password: **Pa55w.rd1234**
 
-1. Within the RDP session to the Azure VM, in Server Manager, navigate to **File and Storage Services**, locate the data disk attached to the Azure VM, initialize it as a **GPT** disk, and use **New Volume Wizard** to create a single volume occupying entire disk with the following settings:
+1. Within the RDP session to the Azure VM, in Server Manager, navigate to **File and Storage Services**, locate the SAS data disk attached to the Azure VM, initialize it as a **GPT** disk, and use **New Volume Wizard** to create a single volume occupying entire disk with the following settings:
 
     - Drive letter: **S**
 
@@ -231,7 +237,7 @@ The main tasks for this exercise are as follows:
 
 1. Within the RDP session to the Azure VM, start Internet Explorer, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign in by using the same Microsoft account you used previously in this lab.
 
-1. In the Azure portal, navigate to the **New** blade.
+1. In the Azure portal, navigate to the **Create a resource** blade.
 
 1. From the **New** blade, search Azure Marketplace for **Azure File Sync**.
 
