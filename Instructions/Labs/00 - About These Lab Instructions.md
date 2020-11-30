@@ -4,7 +4,7 @@
 
 > **Please note**: These labs require that you have an account with Azure and an Internet connection. If you do not have an existing subscription, sign up for a free trial by clicking [here](https://azure.microsoft.com/en-us/free) and following the posted instructions.
 >
-> **The [lab instructions](https://github.com/CoIT-WGU/D084-Lab-Resources/tree/master/Instructions/Labs) listed in our github repository should be opened with a browser, and indicates when you will need to reference each file to successfully complete each exercise.**
+> The [lab instructions](https://github.com/CoIT-WGU/D084-Lab-Resources/tree/master/Instructions/Labs) listed in our github repository should be opened with a browser, and indicates when you will need to reference each file to successfully complete each exercise.
 
 <br />
 
@@ -26,17 +26,8 @@ This repository will include the following labs:
 -  Self-Service Password Reset
 -  VNet Peering and Service Chaining
 
-1. Click **Open Azure Storage Explorer**.
+## Support
 
-1. In the **Explorer** pane, navigate to *\<Your subscription\>\\Storage Accounts\\\<Your storage account name\>*.
+If you find any issues regarding the lab instructions, please create a Program Feedback ticket from within your course of study.
 
-1. Click **Upload**.
-
-1. Click **Upload folder...**.
-
-1. Navigate to **D084-Lab-Resources-master\Allfiles** in your File Explorer. 
-
-1. Select **LabFiles**, then click **Upload** you documented from step 1.
-
-
-#### **Now you should be able to see all of your necessary lab files stored within your Azure File Share to reference as you progress through the labs**.
+> **Note**: If you have any billing questions, please contact Microsoft at 1-855-270-0615.
