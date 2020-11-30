@@ -1,10 +1,8 @@
 # Cloud Platform Solutions
 
-> **Prior to beginning your course, you will need to download all the required lab files and upload them to your Azure storage account. Follow the instructions found in our [Lab Setup page](https://github.com/CoIT-WGU/D084-Lab-Resources/blob/master/Instructions/Labs/00%20-%20Lab%20Setup.md) to prepare your environment for the labs used in this course**.
+## General comments regarding the labs in this course ##
 
-**General comments regarding the labs in this course**
-
-* Throughout, and after completing each module, we ask you deprovision all resources created as you progress. This will help mitigate the risk of exceeding the default CPU quota limits and minimize usage charges.
+* To stay within the contraints of the free trial, make sure that you reserve 1-2 hours of dedicated study time per lab and **follow all instructions exactly as stated**. This will ensure that the resources are provisioned and deprovisioned quickly to prevent exceeding your free trial. **Instructions for deprovisioning your resources are included at the end of every lab**.
 
 * Availability of Azure regions and resources in these regions depends to some extents on the type of subscription you are using. To identify Azure regions available in your subscription, refer to https://azure.microsoft.com/en-us/regions/offers/. To identify resources available in these regions, refer to https://azure.microsoft.com/en-us/global-infrastructure/services/. These restrictions might result in failures during template validation or template deployment, in particular when provisioning Azure VMs. If this happens, review error messages and retry deployment with a different VM size or a different region.
 
