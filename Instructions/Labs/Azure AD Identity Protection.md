@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Azure AD Identity Protection'
-    module: 'Module 10 - Securing Identities'
+    module: 'Securing Identities'
 ---
 
 # Lab: Azure AD Identity Protection
