@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Role-Based Access Control'
-    module: 'Module 11 - Governance and Compliance'
+    module: 'Governance and Compliance'
 ---
 
 # Lab: Role-Based Access Control
