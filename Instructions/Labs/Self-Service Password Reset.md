@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Self-Service Password Reset'
-    module: 'Module 10 - Securing Identtities'
+    module: 'Securing Identtities'
 ---
 
 # Lab: Self-Service Password Reset
