@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Governance and Compliance'
-    module: 'Module 11 - Governance and Compliance'
+    module: 'Governance and Compliance'
 ---
 
 # Lab: Implementing governance and compliance with Azure initiatives and resource locks
