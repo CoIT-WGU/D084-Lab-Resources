@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Azure File Sync'
-    module: 'Module 12 - Data Services'
+    module: 'Data Services'
 ---
 
 # Lab: Implement Azure File Sync
