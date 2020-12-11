@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Implement Directory Synchronization'
-    module: 'Module 09 - Azure Active Directory'
+    module: 'Azure Active Directory'
 ---
 
 # Lab: Implement Directory Synchronization
