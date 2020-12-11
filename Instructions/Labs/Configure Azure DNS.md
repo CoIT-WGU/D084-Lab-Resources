@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Configure Azure DNS'
-    module: 'Module 04 - Virtual Networking'
+    module: 'Virtual Networking'
 ---
 
 # Lab: Configure Azure DNS
