@@ -400,7 +400,7 @@ The main tasks for this exercise are as follows:
 
 1. Close the **Cloud Shell** prompt at the bottom of the portal.
 
-#### Task 3: Delete your tenant
+#### Task 3: Prepare to delete your tenant
 
 1. From your host, start Microsoft Edge, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign with your **aaduser1** account.
 
@@ -416,7 +416,9 @@ The main tasks for this exercise are as follows:
 
 1. Back on the [**https://businessstore.microsoft.com/en-us/manage/inventory/subscriptions**](https://businessstore.microsoft.com/en-us/manage/inventory/subscriptions) page, click **Azure Active Directory Premium P2 Trial** again. You should now see a **Delete** link to the right side.  Click **Delete** and confirm.  Note the date the deletion is scheduled to happen (3 days after you confirm the deletion) as you will need to return to the Azure portal after that time so you can successfully delete the tenant.
 
-1. *After you receive an email confirming the successful removal of your trial subscription, Return to your host, start Microsoft Edge, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign in by using the Microsoft account you used to create the **AdatumLab101-4b** Azure AD tenant.
+#### Task 4: Delete your tenant
+
+1. After you receive an email confirming the successful removal of your trial subscription, Return to your host, start Microsoft Edge, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign in by using the Microsoft account you used to create the **AdatumLab101-4b** Azure AD tenant.
 
      > **Note**: Ensure that you are signed-in to the **AdatumLab101-4b** Azure AD tenant. You can use the **Directory + subscription** filter to switch between Azure AD tenants.
      
