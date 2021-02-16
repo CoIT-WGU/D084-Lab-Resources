@@ -418,13 +418,13 @@ The main tasks for this exercise are as follows:
 
 #### Task 4: Delete your tenant
 
-1. After you receive an email confirming the successful removal of your trial subscription, Return to your host, start Microsoft Edge, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign in by using the Microsoft account you used to create the **AdatumLab101-4b** Azure AD tenant.
+1. After you receive an email confirming the successful removal of your trial subscription return to your host, start Microsoft Edge, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign in by using the Microsoft account you used to create the **AdatumLab101-4b** Azure AD tenant.
 
      > **Note**: Ensure that you are signed-in to the **AdatumLab101-4b** Azure AD tenant. You can use the **Directory + subscription** filter to switch between Azure AD tenants.
      
 1. Click on the **Azure Active Directory** blade.
 
-1. From the **AdatumLab101-4b - Overview** blade and click the **Delete tenant** link.  Confirm that **License-based subscriptions**' status is marked as *Pass*.
+1. From the **AdatumLab101-4b - Overview** blade, click the **Delete tenant** link.  Confirm that **License-based subscriptions**' status is marked as *Pass*.
 
 1. Click the **Delete all users** link and delete aaduser1 and aaduser2.
 
