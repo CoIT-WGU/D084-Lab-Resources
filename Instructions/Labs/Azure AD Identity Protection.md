@@ -408,15 +408,15 @@ The main tasks for this exercise are as follows:
      
 1. Click on the **Azure Active Directory** blade.
 
-1. Click **Delete tenant** and note the required items that need to be completed before you can successfully delete the tenant. We will now delete deprovision license-based subscriptions, disable default managed security templates, and, delete aaduser1 and aaduser2 so you can delete your tenant successfully.
+1. Click **Delete tenant** and note the required items that need to be completed before you can successfully delete the tenant. We will now delete the license-based subscription, disable default managed security templates, and delete aaduser1 and aaduser2 so you can delete your tenant successfully.
 
 1. Click the **Delete all license-based subscriptions**. This will open a new tab and redirect you to [**https://businessstore.microsoft.com/en-us/manage/inventory/subscriptions**](https://businessstore.microsoft.com/en-us/manage/inventory/subscriptions).
 
 1. Click **Azure Active Directory Premium P2 Trial**, then click **Cancel subscription**. Choose **Moving to another service provider**, then click **Cancel subscription**. You will see a confirmation about your subscription successfully being cancelled.  
 
-1. Back on the [**https://businessstore.microsoft.com/en-us/manage/inventory/subscriptions**](https://businessstore.microsoft.com/en-us/manage/inventory/subscriptions) page, click **Azure Active Directory Premium P2 Trial** again. You should now see a **Delete** link to the right side.  Click **Delete** and confirm.  Note the date the deletion is scheduled to happen (3 days after you confirm the deletion) as you will need to the Azure portal after that time so you can successfully delete the tenant.
+1. Back on the [**https://businessstore.microsoft.com/en-us/manage/inventory/subscriptions**](https://businessstore.microsoft.com/en-us/manage/inventory/subscriptions) page, click **Azure Active Directory Premium P2 Trial** again. You should now see a **Delete** link to the right side.  Click **Delete** and confirm.  Note the date the deletion is scheduled to happen (3 days after you confirm the deletion) as you will need to return to the Azure portal after that time so you can successfully delete the tenant.
 
-1. From your host, start Microsoft Edge, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign in by using the Microsoft account you used to create the **AdatumLab101-4b** Azure AD tenant.
+1. *After you receive an email confirming the successful removal of your trial subscription, Return to your host, start Microsoft Edge, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign in by using the Microsoft account you used to create the **AdatumLab101-4b** Azure AD tenant.
 
      > **Note**: Ensure that you are signed-in to the **AdatumLab101-4b** Azure AD tenant. You can use the **Directory + subscription** filter to switch between Azure AD tenants.
      
