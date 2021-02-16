@@ -375,7 +375,6 @@ The main tasks for this exercise are as follows:
 
 ## Exercise 3: Remove lab resources
 
-
 #### Task 1: Open Cloud Shell
 
 1. At the top of the portal, click the **Cloud Shell** icon to open the Cloud Shell pane.
@@ -401,6 +400,36 @@ The main tasks for this exercise are as follows:
 
 1. Close the **Cloud Shell** prompt at the bottom of the portal.
 
-> **Note**: To remove the Azure AD tenant you created in this lab, follow https://docs.microsoft.com/en-us/azure/active-directory/users-groups-roles/directory-delete-howto
+#### Task 3: Delete your tenant
+
+1. From your host, start Microsoft Edge, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign with your **aaduser1** account.
+
+     > **Note**: Ensure that you are signed-in to the **AdatumLab101-4b** Azure AD tenant. You can use the **Directory + subscription** filter to switch between Azure AD tenants.
+     
+1. Click on the **Azure Active Directory** blade.
+
+1. Click **Delete tenant** and note the required items that need to be completed before you can successfully delete the tenant. We will now delete deprovision license-based subscriptions, disable default managed security templates, and, delete aaduser1 and aaduser2 so you can delete your tenant successfully.
+
+1. Click the **Delete all license-based subscriptions**. This will open a new tab and redirect you to [**https://businessstore.microsoft.com/en-us/manage/inventory/subscriptions**](https://businessstore.microsoft.com/en-us/manage/inventory/subscriptions).
+
+1. Click **Azure Active Directory Premium P2 Trial**, then click **Cancel subscription**. Choose **Moving to another service provider**, then click **Cancel subscription**. You will see a confirmation about your subscription successfully being cancelled.  
+
+1. Back on the [**https://businessstore.microsoft.com/en-us/manage/inventory/subscriptions**](https://businessstore.microsoft.com/en-us/manage/inventory/subscriptions) page, click **Azure Active Directory Premium P2 Trial** again. You should now see a **Delete** link to the right side.  Click **Delete** and confirm.  Note the date the deletion is scheduled to happen (3 days after you confirm the deletion) as you will need to the Azure portal after that time so you can successfully delete the tenant.
+
+1. From your host, start Microsoft Edge, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign in by using the Microsoft account you used to create the **AdatumLab101-4b** Azure AD tenant.
+
+     > **Note**: Ensure that you are signed-in to the **AdatumLab101-4b** Azure AD tenant. You can use the **Directory + subscription** filter to switch between Azure AD tenants.
+     
+1. Click on the **Azure Active Directory** blade.
+
+1. From the **AdatumLab101-4b - Overview** blade and click the **Delete tenant** link.  Confirm that **License-based subscriptions**' status is marked as *Pass*.
+
+1. Click the **Delete all users** link and delete aaduser1 and aaduser2.
+
+1. Return to the **AdatumLab101-4b - Overview** blade and click the **Properties** blade.
+
+1.  Click the Yes/No slider to **Yes** under **Access management for Azure resources**. This will allow your account to manage this tenant.
+
+1. Return to the **AdatumLab101-4b - Overview** blade and click the **Delete tenant** link.  Confirm the deletion. 
 
 > **Result**: In this exercise, you removed the resources used in this lab.
