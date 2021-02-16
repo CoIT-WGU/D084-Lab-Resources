@@ -123,24 +123,20 @@ The main tasks for this exercise are as follows:
 
 #### Task 2: Activate Azure AD Premium v2 trial
 
-1. In the Azure portal, set the **Directory + subscription** filter to **AdatumLab101-4b** (the newly created Azure AD tenant.)
-
-     > **Note**: The **Directory + subscription** filter is located to the right of the Cloud Shell icon in the toolbar of the Azure portal
-
-     > **Note**: You might need to refresh the browser window if the **AdatumLab101-4b** entry does not appear in the **Directory + subscription** filter list.
-
 1. In the Azure portal, navigate to the **AdatumLab101-4b - Overview** blade.
 
 1. From the **AdatumLab101-4b - Overview** blade, navigate to the **Licenses** blade.
 
-1. From the **Licenses - Overview** blade, navigate to the **Licenses - All products** blade.
+1. From the **Licenses - Overview** blade, navigate to the **All products** blade.
 
-1. From the **Licenses - All products** blade, click **+ Try / Buy**, click **Free Trial** under Azure AD Premium P2, and then click **Activate**.
+1. From the **All products** blade, click **+ Try / Buy**, click **Free Trial** under Azure AD Premium P2, and then click **Activate**.
 
 
 #### Task 3: Create Azure AD users and groups.
 
-1. In the Azure portal, navigate to the **Users** blade of the AdatumLab101-4b Azure AD tenant.
+1. In the Azure portal, navigate back to the **AdatumLab101-4b | Overview** blade.
+
+1. Click the **Users** blade of the AdatumLab101-4b Azure AD tenant.
 
 1. From the **Users - All users** blade, create a new user with the following settings:
 
@@ -198,7 +194,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **Users - All users** blade of the AdatumLab101-4b Azure AD tenant, use the **Multi-Factor Authentication** link to open the **multi-factor authentication** portal.
 
-1. On the **multi-factor authentication** portal, display to the **service settings** tab, review its settings, and the **verification options**, including **Text message to phone**, **Notification through mobile app**, and **Verification code from mobile app or hardware token** are enabled.
+1. On the **multi-factor authentication** portal, display the **service settings** tab, review its settings, and the **verification options**, including **Text message to phone**, **Notification through mobile app**, and **Verification code from mobile app or hardware token** are enabled.
 
 1. On the **multi-factor authentication** portal, switch to the **users** tab, select **aaduser1** entry, and enable its multi-factor authentication status.
 
@@ -218,7 +214,7 @@ The main tasks for this exercise are as follows:
 
 1. From the **Users - All users** blade of the AdatumLab101-4b Azure AD tenant, navigate to the **AdatumLab101-4b** blade.
 
-1. From the **AdatumLab101-4b - Overview** blade, navigate to the Security blade, then MFA blade.
+1. Return to the **AdatumLab101-4b - Overview** blade, navigate to the Security blade, then **MFA** blade.
 
      > **Note**: You might need to first click the **Security** entry in the vertical menu of the Azure Active Directory tenant blade.
 
@@ -243,13 +239,13 @@ The main tasks for this exercise are as follows:
 
 1. On the **How should we contact you?** page, note that you need to set up one of the following options:
 
-    - **Authentication phone**
+    - **Authenticator app**
 
-    - **Mobile app**
+    - **Phone**
 
-1. Select the **Authentication phone** option with the **Send me a code by text message** method.
+1. Select the **Phone** option and enter your text number to receive a text.
 
-1. Complete the verification and note the automatically generated app password.
+1. Complete the verification and note the automatically generated code.
 
 1. When prompted, change the password from the one generated when you created the **aaduser1** account.
 
@@ -271,24 +267,15 @@ The main tasks for this exercise are as follows:
 1. Validate Azure AD Identity Protection configuration by simulating risk events
 
 
-#### Task 1: Enable Azure AD Identity Protection
+#### Task 1: Configure user risk policy using Azure AD Identity Protection
 
-1. From the lab virtual machine, start Microsoft Edge, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign in by using the Microsoft account you used to create the **AdatumLab101-4b** Azure AD tenant.
+1. From your host, start Microsoft Edge, browse to the Azure portal at [**http://portal.azure.com**](http://portal.azure.com) and sign in by using the Microsoft account you used to create the **AdatumLab101-4b** Azure AD tenant.
 
      > **Note**: Ensure that you are signed-in to the **AdatumLab101-4b** Azure AD tenant. You can use the **Directory + subscription** filter to switch between Azure AD tenants.
 
-1. In the Azure portal, navigate to the **Create a resource** blade.
-
-1. From the **New** blade, search Azure Marketplace for **Azure AD Identity Protection**.
-
-1. Select the **Azure AD Identity Protection** in the list of search results and proceed to create an instance of **Azure AD Identity Protection** associated with the **AdatumLab101-4b** Azure AD tenant.
-
 1. In the Azure portal, navigate to the **All services** blade and use the search filter to display the **Azure AD Identity Protection** blade.
 
-
-#### Task 2: Configure user risk policy
-
-1. From the **Azure AD Identity Protection** blade, navigate to the **Azure AD Identity Protection - User risk policy** blade
+1. From the **Identity Protection** blade, navigate to the **User risk policy** blade
 
 1. On the **Azure AD Identity Protection - User risk policy** blade, configure the **User risk remediation policy** with the following settings:
 
@@ -304,7 +291,7 @@ The main tasks for this exercise are as follows:
 
         - Access: **Allow access**
 
-        - **Require multi-factor authentication**
+        - **Require password change: unchecked**
 
     - Enforce Policy: **On**
 
